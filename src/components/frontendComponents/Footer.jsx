@@ -5,38 +5,52 @@ const Footer = () => {
     return (
         <>
             <footer className="bg-blue-600 text-white">
-                <div className='flex flex-col lg:flex-row justify-between w-1/2 border lg:w-10/12 mx-auto'>
-                    <div className='flex flex-col'>
+                <div className='flex flex-col lg:flex-row justify-between w-1/2  lg:w-10/12 mx-auto  py-10'>
+                    
+                    <div className='flex flex-col basis-1/4 space-y-2'>
+                        <p className='text-2xl'>Discover</p>
                         <p>Home</p>
+                        <p>Terms & conditions</p>
+                        <p>Career</p>
+                        <p>Refund Policy</p>
+                        <p>EMI Policy</p>
+                        <p>Privacy Policy</p>
+
+                    </div>
+
+                    <div className='flex flex-col basis-1/4 space-y-2'>
+                        <p className='text-2xl'>Payment Methods</p>
                         <p>Home</p>
-                        <p>Home</p>
-                        <p>Home</p>
-                        <p>Home</p>
+                        <p>Terms & conditions</p>
+                        <p>Career</p>
+                        <p>Refund Policy</p>
+                        <p>EMI Policy</p>
+                        <p>Privacy Policy</p>
+
+                    </div>
+
+                    <div className='flex flex-col basis-1/4 space-y-2'>
+                        <p className='text-2xl'>Need Help ?</p>
+                        <p>We are Always here for you! <br /> Knock us on Messanger anytime <br /> or Call our Hotline (10AM - 10PM).</p>
                         
-                    </div>
-                    <div className='flex'>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
+                        <p className='text-2xl mt-20'>Contact</p>
+                        <p>info@bideshgami.com</p>
+                        <p>+8845345343345</p>
                     </div>
 
-                    <div className='flex'>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
+                    <div className='flex flex-col basis-1/4 space-y-2'>
+                        <p className='text-2xl'>Download our app</p>
+                        <p>Home</p>
+                        <p>Terms & conditions</p>
+                        <p>Career</p>
+                        <p>Refund Policy</p>
+                        <p>EMI Policy</p>
+                        <p>Privacy Policy</p>
+
                     </div>
 
-                    <div className='flex'>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                        <Link>Home</Link>
-                    </div>
+
+
                 </div>
                 <div className="bg-gray-100">
                     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
