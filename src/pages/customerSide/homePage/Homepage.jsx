@@ -5,11 +5,7 @@ import Home from '../../../component/Home';
 const Homepage = () => {
     return (
         <div>
-            {/* <Helmet>
-                <title>Bideshgami</title>
-            </Helmet>
-            This is homepage. */}
-            <Home/>
+            I am from homepage components
         </div>
     );
 };
