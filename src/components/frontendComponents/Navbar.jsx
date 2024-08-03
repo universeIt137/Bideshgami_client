@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
-import logo from "../assets/img/logo.png";
+// import logo from "../assets/img/logo.png";
 import { FaCommentDots } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 
@@ -12,7 +12,7 @@ const Navbar = () => {
 
       <div className="border border-black flex justify-between">
         <div className="logo">
-          <img className="w-[187px] h-[66px] " src={logo} alt="....." />
+          <img className="w-[187px] h-[66px] " src="" alt="....." />
         </div>
         <div className="notification  ">
           <span className=" block ">
