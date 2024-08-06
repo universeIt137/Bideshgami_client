@@ -7,6 +7,7 @@ import { FaAngleDoubleRight } from 'react-icons/fa';
 
 const Homepage = () => {
     return (
+
         <div className='min-h-screen w-10/12 mx-auto py-20'>
             <div className='flex justify-between my-10'>
                 <p className='font-bold text-3xl'>Work Permit</p>
@@ -53,6 +54,9 @@ const Homepage = () => {
                 <PriceCard></PriceCard>
                 <PriceCard></PriceCard>
             </div>
+
+        <div>
+           
             
         </div>
     );
