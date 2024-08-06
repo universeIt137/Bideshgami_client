@@ -76,7 +76,7 @@ const Footer = () => {
 
                 <hr />
 
-                <div className="bg-blue-600 border border-black ">
+                <div className="bg-blue-600  w-3/4 mx-auto">
                     <div className="container mx-auto py-4 flex flex-wrap flex-col items-center sm:flex-row">
                         
                         <div>
