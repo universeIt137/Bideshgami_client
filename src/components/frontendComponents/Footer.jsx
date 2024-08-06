@@ -9,9 +9,9 @@ const Footer = () => {
     return (
         <>
             <footer className="bg-blue-600 text-white">
-                <div className='flex flex-col lg:flex-row justify-between w-1/2  lg:w-10/12 mx-auto  py-10'>
+                <div className='flex flex-col lg:flex-row justify-between w-1/2  lg:w-10/12 mx-auto items-center  py-10 text-center lg:text-start'>
 
-                    <div className='flex flex-col basis-1/4 space-y-2'>
+                    <div className=' flex flex-col basis-1/4 space-y-2'>
                         <p className='text-2xl'>Discover</p>
                         <p>Home</p>
                         <p>Terms & conditions</p>
@@ -22,7 +22,7 @@ const Footer = () => {
 
                     </div>
 
-                    <div className='flex flex-col basis-1/4 space-y-2 '>
+                    <div className='mt-12 lg:mt-0 flex flex-col basis-1/4 space-y-2 '>
                         <p className='text-2xl mb-5'>Payment Methods</p>
                         {/* <div className='text-4xl space-y-5 '>
                             <div className='flex gap-8'>
@@ -42,12 +42,12 @@ const Footer = () => {
                             </div>
                         </div> */}
 
-                        <div className='lg:ml-6'>
+                        <div className='ml-8 lg:ml-6'>
                             <img src="https://res.cloudinary.com/deifi77os/image/upload/v1722700494/Bideshgami/scvpwmf9pexosg2ikfvy.png" alt="" />
                         </div>
                     </div>
 
-                    <div className='flex flex-col basis-1/4 space-y-2'>
+                    <div className='mt-12 lg:mt-0 flex flex-col basis-1/4 space-y-2'>
                         <p className='text-2xl'>Need Help ?</p>
                         <p>We are Always here for you! <br /> Knock us on Messanger anytime <br /> or Call our Hotline (10AM - 10PM).</p>
 
@@ -56,13 +56,13 @@ const Footer = () => {
                         <p>+8845345343345</p>
                     </div>
 
-                    <div className='flex flex-col basis-1/4 space-y-2'>
+                    <div className='mt-12 lg:mt-0 flex flex-col basis-1/4 space-y-2'>
                         <div className='text-center'>
                             <p className='text-2xl'>Download our app</p>
                             <div className='flex justify-center'>
                                 <img src="https://res.cloudinary.com/deifi77os/image/upload/v1722700494/Bideshgami/k9c2qx9dpap03abxm8xs.png" alt="" />
                             </div>
-                            <p className='text-2xl'>Follow Us</p>
+                            <p className='text-2xl mt-4'>Follow Us</p>
                             <div className='flex justify-center'>
                                 <img src="https://res.cloudinary.com/deifi77os/image/upload/v1722700494/Bideshgami/uec8sawxfqbbgxoptckw.png" alt="" />
                             </div>
@@ -77,9 +77,11 @@ const Footer = () => {
                 <hr />
 
                 <div className="bg-blue-600 border border-black ">
-                    <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                    <div className="container mx-auto py-4 flex flex-wrap flex-col items-center sm:flex-row">
                         
-                        <img src="https://res.cloudinary.com/deifi77os/image/upload/v1722700494/Bideshgami/kbcp5nbx2ssawy4hwd1f.png" alt="" />
+                        <div>
+                            <img className='w-24' src="https://res.cloudinary.com/deifi77os/image/upload/v1722700494/Bideshgami/kbcp5nbx2ssawy4hwd1f.png" alt="" />
+                        </div>
 
 
                         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center  items-center sm:justify-start">
