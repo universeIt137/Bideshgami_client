@@ -55,10 +55,10 @@ const Homepage = () => {
                 <PriceCard></PriceCard>
             </div>
 
-        <div>
+        </div>
            
             
-        </div>
+        
     );
 };
 
