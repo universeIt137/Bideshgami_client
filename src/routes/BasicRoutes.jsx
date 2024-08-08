@@ -13,6 +13,16 @@ const BasicRoutes = createBrowserRouter([
                 element: <Homepage></Homepage>
             }
         ]
+    },
+    {
+        path: "/dps",
+        element: <MainLayout></MainLayout>,
+        children: [
+            {
+                path: '/dps',
+                element: <Homepage></Homepage>
+            }
+        ]
     }
 ]);
 
