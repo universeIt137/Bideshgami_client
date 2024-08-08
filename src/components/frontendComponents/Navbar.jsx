@@ -12,7 +12,7 @@ const Navbar = () => {
       <div>
         <div className='container mx-auto flex  lg:flex-row justify-between items-center'>
             <div>
-                <img src='logo.png' className='w-48' alt='logo' />
+                <img src='https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099201/logo_j54wbc.png' className='w-48' alt='logo' />
             </div>
             <div className='flex items-center lg:flex-row '>
                 <IoIosNotifications className='text-3xl text-blue-600' />
