@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import Homepage from '../pages/customerSide/homePage/Homepage';
+import VisaDetails from '../pages/customerSide/VisaDetails/VisaDetails';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -9,8 +10,12 @@ const BasicRoutes = createBrowserRouter([
         element: <MainLayout></MainLayout>,
         children: [
             {
-                path: "/", 
+                path: "/",
                 element: <Homepage></Homepage>
+            },
+            {
+                path: "/visaDetails",
+                element: <VisaDetails />
             }
         ]
     },
@@ -26,6 +31,6 @@ const BasicRoutes = createBrowserRouter([
     }
 ]);
 
-    
+
 
 export default BasicRoutes;
