@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useEffect } from "react";
 import './HeroSection.css';
 import { MdOutlineSettingsInputComponent } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
 import AirTicket from '../../../assets/icon/airoplane.png';
 import honeymoon from '../../../assets/icon/honeymoon.png';
 import hotel from '../../../assets/icon/hotel.png';
@@ -13,46 +18,71 @@ import student from '../../../assets/icon/student.png';
 import workpermit from '../../../assets/icon/workpermit.png';
 
 const HeroSection = () => {
+  useEffect(() => {
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation, Pagination],
+      slidesPerView: 2, // Show 2 slides at a time
+      spaceBetween: 10, // Space between slides
+      navigation: true, // Show navigation arrows
+      pagination: { // Show pagination bullets
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1, // Show 1 slide at a time on small screens
+        },
+        768: {
+          slidesPerView: 2, // Show 2 slides at a time on larger screens
+        },
+      },
+    });
+
+    return () => {
+      swiper.destroy(); // Clean up Swiper instance on unmount
+    };
+  }, []);
 
   let dataIcon = [
     {
       id :1,
-      img: AirTicket,
+      img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099528/airoplane_et3w27.png',
       title: 'Air-Ticket'
     },
     {
       id : 2,
-      img: workpermit,
+      img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099526/workpermit_ltyza3.png',
       title: 'Work Permit'
     },
     {
       id :1,
-      img: student,
+      img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099523/student_knkkhn.png',
       title: 'Student Visa'
     },
     {
       id :1,
-      img: kaaba,
+      img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099534/kaaba_pdvqkk.png',
       title: 'Hajj Umrah'
     },
     {
       id :1,
-      img: passport,
+      img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099536/passport_gannt5.png',
       title: 'Visa Processing'
     },
     {
       id :1,
-      img: hotel,
+      img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099532/hotel_tmanpg.png',
       title: 'Tour Package'
     },
     {
       id :1,
-      img: playbutton,
+      img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099520/play-button_wt1rkb.png',
       title: 'Video'
     },
     {
       id :1,
-      img: questionmark,
+      img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099522/question-mark_ysnafb.png',
       title: 'Question'
     }
   ]
@@ -125,15 +155,23 @@ const HeroSection = () => {
       </div>
       {/* Slider */}
       <div className="container mx-auto mt-5">
-        <div className='grid gap-3 grid-cols-2'>
-          <div className="">
-            <img className="rounded-md w-full" src='Component-1.png' alt="component1"/>
+      <div className="swiper">
+        <div className="swiper-wrapper">
+          <div className="swiper-slide">
+            <img className="rounded-md w-full h-auto" src='https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099202/Component-1_xyynrp.png' alt="component1"/>
           </div>
-          <div className="">
-            <img className="rounded-md w-full" src='Component-2.png' alt="component1"/>
+          <div className="swiper-slide">
+            <img className="rounded-md w-full h-auto" src='https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099202/Component-2_lpgydq.png' alt="component2"/>
           </div>
+          {/* Add more slides as needed */}
         </div>
+        {/* Pagination */}
+        <div className="swiper-pagination"></div>
+        {/* Navigation */}
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
       </div>
+    </div>
 
       
      </>
