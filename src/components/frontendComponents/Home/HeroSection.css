@@ -1,6 +1,5 @@
 .hero-sec{
-    background-image: url('image-1.png');
-    background-size: cover;
+    background-image: url('../../../assets/heroSec.png');
 }
 .bottom-9p{
     bottom: -36%;
