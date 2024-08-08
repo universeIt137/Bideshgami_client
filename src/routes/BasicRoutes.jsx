@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
+import VisaDetails from '../pages/customerSide/VisaDetails/VisaDetails';
 import Homepage from '../pages/homePage/Homepage';
 import LoginPage from '../pages/UserPage/LoginPage';
 import ForgetPasswordPage from '../pages/UserPage/ForgetPasswordPage';
@@ -14,8 +15,12 @@ const BasicRoutes = createBrowserRouter([
         element: <MainLayout></MainLayout>,
         children: [
             {
-                path: "/", 
+                path: "/",
                 element: <Homepage></Homepage>
+            },
+            {
+                path: "/visaDetails",
+                element: <VisaDetails />
             }
         ]
     },
@@ -71,6 +76,6 @@ const BasicRoutes = createBrowserRouter([
     },
 ]);
 
-    
+
 
 export default BasicRoutes;

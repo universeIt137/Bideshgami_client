@@ -10,9 +10,16 @@ export default {
         fontFamily: {
           inter: ['Inter', 'sans-serif'],
         },
+        colors: {
+          primary: '#0066FF',
+        }
       },
     },
   },
   plugins: [require('daisyui'),],
+  daisyui: {
+    themes: ['light'],
+  },
 }
 
+// 
