@@ -17,9 +17,11 @@ const ForgetPassword = () => {
               placeholder="Enter your email address"
             />
           </div>
-          <button className="w-full py-2 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-lg focus:outline-none">
-            Forget Password
-          </button>
+          <Link to="/change-password">
+            <button className="w-full py-2 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-lg focus:outline-none">
+              Forget Password
+            </button>
+          </Link>
           <div className="mt-4 text-center">
             <Link
               className="text-blue-600 font-semibold flex items-center justify-center gap-1"

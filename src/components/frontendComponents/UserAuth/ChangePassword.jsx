@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ChangePassword = () => {
   return (
@@ -28,9 +29,12 @@ const ChangePassword = () => {
               placeholder="Confirm your new password"
             />
           </div>
-          <button className="w-full py-2 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-lg focus:outline-none">
-            Update Password
-          </button>
+          <Link to="/OTP-code">
+            <button className="w-full py-2 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-lg focus:outline-none">
+              Update Password
+            </button>
+          </Link>
+
         </div>
       </div>
     </div>
