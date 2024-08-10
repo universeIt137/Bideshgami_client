@@ -21,59 +21,32 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: "/visaDetails",
                 element: <VisaDetails />
-            }
-        ]
-    },
-    {
-        path: "/login",
-        element: <MainLayout></MainLayout>,
-        children: [
+            },
             {
                 path: '/login',
                 element: <LoginPage></LoginPage>
-            }
-        ]
-    },
-    {
-        path: "/forgot-password",
-        element: <MainLayout></MainLayout>,
-        children: [
+            },
             {
                 path: '/forgot-password',
                 element: <ForgetPasswordPage></ForgetPasswordPage>
-            }
-        ]
-    },
-    {
-        path: "/change-password",
-        element: <MainLayout></MainLayout>,
-        children: [
+            },
             {
                 path: '/change-password',
                 element: <ChangePasswordPage></ChangePasswordPage>
-            }
-        ]
-    },
-    {
-        path: "/OTP-code",
-        element: <MainLayout></MainLayout>,
-        children: [
+            },
             {
                 path: '/OTP-code',
                 element: <OtpPage></OtpPage>
-            }
-        ]
-    },
-    {
-        path: "/successfully_Pass_change",
-        element: <MainLayout></MainLayout>,
-        children: [
+            },
             {
                 path: '/successfully_Pass_change',
                 element: <SuccessfullyPassPage></SuccessfullyPassPage>
             }
+
         ]
     },
+    
+        
 ]);
 
 

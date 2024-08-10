@@ -17,9 +17,12 @@ const Otp = () => {
               />
             ))}
           </div>
-          <button className="w-full py-2 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-lg focus:outline-none">
-            Submit
-          </button>
+          <Link to="/successfully_Pass_change">
+            <button className="w-full py-2 bg-blue-600 text-white font-semibold hover:bg-blue-700 rounded-lg focus:outline-none">
+              Submit
+            </button>
+          </Link>
+
           <div className="flex justify-between items-center mt-6 text-gray-600 text-sm">
             <span>
               Remaining time: <span className="text-blue-600">00:55</span> Seconds

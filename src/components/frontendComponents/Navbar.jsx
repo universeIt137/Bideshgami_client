@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
 // import logo from "../assets/img/logo.png";
 import { IoIosNotifications } from "react-icons/io";
@@ -11,15 +11,17 @@ const Navbar = () => {
     <>
       <div>
         <div className='container mx-auto flex  lg:flex-row justify-between items-center'>
+          <Link to="/">
             <div>
-                <img src='https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099201/logo_j54wbc.png' className='w-48' alt='logo' />
+              <img src='https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099201/logo_j54wbc.png' className='w-48' alt='logo' />
             </div>
-            <div className='flex items-center lg:flex-row '>
-                <IoIosNotifications className='text-3xl text-blue-600' />
-                <BiSolidMessageRoundedDetail className='text-3xl text-blue-600' />
-            </div>
+          </Link>
+          <div className='flex items-center lg:flex-row '>
+            <IoIosNotifications className='text-3xl text-blue-600' />
+            <BiSolidMessageRoundedDetail className='text-3xl text-blue-600' />
+          </div>
         </div>
-        
+
         <div className="navbar bg-[#0066FF] shadow-2xl px-10 text-[white] font-medium    ">
           <div className="nav">
             <nav>
@@ -46,7 +48,7 @@ const Navbar = () => {
                 </li>
                 <li className="px-3">
                   {" "}
-                  <NavLink to={"/visa-processing"}>Visa Processing</NavLink>{" "}
+                  <NavLink to={"/visaDetails"}>Visa Details</NavLink>{" "}
                 </li>
                 <li className="px-3">
                   {" "}
@@ -70,7 +72,7 @@ const Navbar = () => {
                 {" "}
                 <FaRegUser />{" "}
               </span>
-              <NavLink to={"/sign-in"}>Sign In</NavLink>
+              <NavLink to={"/login"}>Sign In</NavLink>
             </div>
           </div>
         </div>
