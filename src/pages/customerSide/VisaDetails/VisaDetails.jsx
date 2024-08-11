@@ -2,13 +2,13 @@ import { IoMdShare } from 'react-icons/io';
 import banner from '../../../assets/detailsPage/banner.jpeg'
 import image1 from '../../../assets/detailsPage/image1.jpeg'
 import postIcon from '../../../assets/detailsPage/postIcon.png'
-import { IoShareSocialSharp } from 'react-icons/io5';
-import { MdFavoriteBorder } from 'react-icons/md';
 import { BsChatDotsFill, BsEyeFill } from "react-icons/bs";
 import AdsSection from './AdsSection';
 import scamImg from '../../../assets/detailsPage/scamImg.png'
 import { FaChevronDown } from 'react-icons/fa6';
 import { useState } from 'react';
+import Share from './Share';
+import { MdFavoriteBorder } from 'react-icons/md';
 const VisaDetails = () => {
     const btnStyle = `bg-primary text-white w-[200px] text-[15px] font-semibold py-1.5 rounded-md transition-all duration-300 active:scale-90`
     const [seeMore, setSeeMore] = useState(false)
@@ -80,10 +80,10 @@ const VisaDetails = () => {
                     <div className='space-y-5'>
                         {/* share and fav  */}
                         <div className='flex gap-10 justify-end'>
-                            <button className='text-base sm:text-xl flex items-center gap-0.5'><IoShareSocialSharp />
-                                Share</button>
+                            <Share />
                             <button className='text-sm sm:text-[15px] flex items-center gap-0.5'><MdFavoriteBorder className='text-base sm:text-xl' />Favorite Card</button>
                         </div>
+
                         <div className='text-sm flex items-center gap-1'>
                             <BsEyeFill className='text-primary' />
                             <p className='text-xs'>205 Total Apply</p>
@@ -102,7 +102,7 @@ const VisaDetails = () => {
                         {/* scam section  */}
                         <div className='w-full border-primary border p-3 flex justify-center items-center flex-col gap-4'>
                             <img className='size-[100px] object-cover' src={scamImg} alt="" />
-                            <h2 className= 'text-base sm:text-xl font-medium'>Stay Alert: Avoid Online Scams</h2>
+                            <h2 className='text-base sm:text-xl font-medium'>Stay Alert: Avoid Online Scams</h2>
                             <p className='text-[13px]'>Never share card details or OTPs, and always verify items in person before
                                 payment. Bikroy does not offer a delivery service. Stay vigilant!</p>
                             <div className='flex justify-end 2 w-full'>
