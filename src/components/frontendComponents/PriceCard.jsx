@@ -15,7 +15,7 @@ const PriceCard = () => {
         <div className="w-11/12 mx-auto mt-1">
           <div className='flex justify-between items-center text-xl'>
             <div>
-              <h2 className="">Malaysia Work Permit</h2>
+              <h2 className="">Malaysia Work Permit Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, voluptatum.</h2>
             </div>
             <div><CiHeart /></div>
           </div>
