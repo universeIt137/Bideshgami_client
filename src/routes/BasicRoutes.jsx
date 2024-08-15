@@ -8,6 +8,7 @@ import ForgetPasswordPage from '../pages/UserPage/ForgetPasswordPage';
 import ChangePasswordPage from '../pages/UserPage/ChangePasswordPage';
 import OtpPage from '../pages/UserPage/OtpPage';
 import SuccessfullyPassPage from '../pages/UserPage/SuccessfullyPassPage';
+import AboutUs from '../pages/customerSide/AboutUs/AboutUs';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -41,12 +42,16 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: '/successfully_Pass_change',
                 element: <SuccessfullyPassPage></SuccessfullyPassPage>
+            },
+            {
+                path: 'about-us',
+                element: <AboutUs />
             }
 
         ]
     },
-    
-        
+
+
 ]);
 
 

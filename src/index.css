@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.inputShadow{
+    box-shadow: 0px 0px 5px 3px rgb(216, 214, 214);
+}
+.mainBoxShadow{
+    box-shadow: 0px 2px 5px 2px rgb(202, 200, 200);
+}
