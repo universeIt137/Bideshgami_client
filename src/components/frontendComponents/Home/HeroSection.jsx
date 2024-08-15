@@ -105,10 +105,10 @@ const HeroSection = () => {
             {
               dataIcon.map((item, idx) => (
                 <Link key={idx} className="flex flex-col items-center justify-center text-center">
-                  <div className="bg-blue-600 hover:bg-blue-700 transition-all rounded-full w-16 h-16 flex items-center justify-center">
-                    <img src={item.img} className='w-3/4 h-3/4' alt={item.title} />
+                  <div className="bg-blue-600 hover:bg-blue-700 transition-all rounded-full size-[51px] flex items-center justify-center">
+                    <img src={item.img} className='size-8' alt={item.title} />
                   </div>
-                  <p className="font-semibold mt-2">{item.title}</p>
+                  <p className="font-semibold mt-2 text-xs">{item.title}</p>
                 </Link>
               ))
             }

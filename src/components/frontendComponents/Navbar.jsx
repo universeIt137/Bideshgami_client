@@ -22,10 +22,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="navbar bg-[#0066FF] shadow-2xl px-10 text-[white] font-medium    ">
+        <div className=" bg-[#0066FF] shadow-2xl px-10 text-white font-medium  overflow-hidden py-3 flex justify-center items-center">
           <div className="nav">
             <nav>
-              <ul className=" flex flex-row justify-center items-center ">
+              <ul className=" flex flex-wrap justify-center items-center text-sm">
                 <li className="px-3">
                   {" "}
                   <NavLink to={"/"}>Home</NavLink>{" "}
@@ -62,19 +62,19 @@ const Navbar = () => {
                   {" "}
                   <NavLink to={"/about-us"}>About us </NavLink>{" "}
                 </li>
+
+                <li className="px-5 list-none "> En/বাংলা </li>
+                <div className="sign-up flex flex-row justify-around  items-center ">
+                  <span>
+                    {" "}
+                    <FaRegUser />{" "}
+                  </span>
+                  <NavLink to={"/login"}>Sign In</NavLink>
+                </div>
               </ul>
             </nav>
           </div>
-          <div className="nav-left ml-6 ">
-            <li className="px-5 list-none "> En/বাংলা </li>
-            <div className="sign-up flex flex-row justify-around  items-center ">
-              <span>
-                {" "}
-                <FaRegUser />{" "}
-              </span>
-              <NavLink to={"/login"}>Sign In</NavLink>
-            </div>
-          </div>
+          
         </div>
       </div>
     </>
