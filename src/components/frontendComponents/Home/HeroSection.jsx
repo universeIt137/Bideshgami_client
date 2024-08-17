@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import './HeroSection.css';
-import { MdOutlineSettingsInputComponent } from "react-icons/md";
+import { MdOutlineSearch, MdOutlineSettingsInputComponent } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 
 import HomePageSliderSection from "./HomePageSliderSection";
+import { IoSearchSharp } from "react-icons/io5";
 
 const HeroSection = () => {
 
@@ -55,12 +56,12 @@ const HeroSection = () => {
     <>
       {/* Hero Section  */}
       <div className='hero-sec bg-cover bg-center relative h-56'>
-        <div className='absolute bottom-9p left-1/2 lg:w-2/5 transform -translate-x-1/2'>
-          <div className='text-center py-5 px-20 rounded-lg bg-white shadow-md'>
+        <div className='absolute bottom-9p left-1/2  w-full  transform -translate-x-1/2 px-10'>
+          <div className='text-center p-5 max-w-[574px] mx-auto rounded-lg bg-white mainBoxShadow justify-center'>
 
-            <div className="flex gap-4 justify-center mb-3">
+            <div className="flex gap-4 justify-between mb-3 max-w-[322px] mx-auto text-[13px] flex-wrap">
 
-              <select className='select bg-blue-600 rounded-2xl text-white font-semibold border-0 hover:bg-blue-500'>
+              <select className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-1  min-w-[123px] h-[33px] rounded-xl'>
                 <option value="">Select Country</option>
                 <option value="Bangladesh">Bangladesh</option>
                 <option value="Afganistan">Afganistan</option>
@@ -70,30 +71,21 @@ const HeroSection = () => {
                 <option value="Franch">Franch</option>
               </select>
 
-              <select className='select bg-blue-600 rounded-2xl text-white font-semibold border-0 hover:bg-blue-500'>
+              <select className=' bg-blue-600 rounded-xl text-white font-semibold border-0 px-1 min-w-[111px] hover:bg-blue-500 h-[33px]'>
                 <option value="">Type of work</option>
                 <option value="Labour">Labour</option>
                 <option value="Lawyer">Lawyer</option>
                 <option value="Programmer">Programmer</option>
               </select>
 
-              <button className='btn bg-blue-600 rounded-2xl text-white font-semibold border-0 hover:bg-blue-500'><MdOutlineSettingsInputComponent /></button>
+              <button className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-5 h-[33px] rounded-xl'><MdOutlineSettingsInputComponent /></button>
             </div>
-            <label className="input input-bordered flex items-center gap-2">
-              <input type="text" className="grow rounded-3xl  text-center" placeholder="Search in Bideshgami" />
-              <span className="p-2 rounded-full font-bold bg-blue-600 text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  className="h-4 w-4 opacity-70">
-                  <path
-                    fillRule="evenodd"
-                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                    clipRule="evenodd" />
-                </svg>
-              </span>
-            </label>
+            <div className="relative max-w-[322px] mx-auto">
+              <input type="text" className="grow rounded-xl  text-center h-9 w-full inputShadow" placeholder="Search in Bideshgami" />
+              <p className="rounded-full bg-blue-600 text-white absolute right-1.5 top-1.5 size-6 flex justify-center items-center">
+                <IoSearchSharp className="text-[15px]" />
+              </p>
+            </div>
           </div>
         </div>
 
@@ -101,14 +93,14 @@ const HeroSection = () => {
       </div>
       <div className='container mx-auto text-center pt-20 '>
         <div className="pt-7">
-          <div className='flex justify-center gap-8' >
+          <div className='flex justify-center gap-8 flex-wrap' >
             {
               dataIcon.map((item, idx) => (
                 <Link key={idx} className="flex flex-col items-center justify-center text-center">
-                  <div className="bg-blue-600 hover:bg-blue-700 transition-all rounded-full w-16 h-16 flex items-center justify-center">
-                    <img src={item.img} className='w-3/4 h-3/4' alt={item.title} />
+                  <div className="bg-blue-600 hover:bg-blue-700 transition-all rounded-full size-[51px] flex items-center justify-center">
+                    <img src={item.img} className='size-8' alt={item.title} />
                   </div>
-                  <p className="font-semibold mt-2">{item.title}</p>
+                  <p className="font-semibold mt-2 text-xs">{item.title}</p>
                 </Link>
               ))
             }

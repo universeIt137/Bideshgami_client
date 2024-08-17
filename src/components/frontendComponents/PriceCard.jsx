@@ -1,30 +1,34 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { CiHeart } from 'react-icons/ci';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
-const PriceCard = () => {
+const PriceCard = ({ data }) => {
+  ;
+  console.log(data);
+
   return (
     <>
-      <div className="card bg-base-100 shadow-lg ">
+      <div className="card bg-base-100 shadow-lg w-[278px]">
         <figure className="">
           <img
-            src="https://res.cloudinary.com/deifi77os/image/upload/v1722704356/Bideshgami/n6cydse6rc6osbd7fvsz.png"
+            src={data?.image || ''}
             alt="Shoes"
-            className="rounded-xl w-full" />
+            className="rounded-t-xl w-full  h-[162px] object-cover" />
         </figure>
         <div className="w-11/12 mx-auto mt-1">
           <div className='flex justify-between items-center text-xl'>
             <div>
-              <h2 className="">Malaysia Work Permit Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, voluptatum.</h2>
+              <h2 className="text-lg font-medium">{data?.title || ''}</h2>
             </div>
-            <div><CiHeart /></div>
+            <div><CiHeart className='text-xl text-primary' /></div>
           </div>
-          <p className='text-2xl font-bold text-[#0066FF] mt-6'>15,000 BDT</p>
-          
-            <p className='text-end text-xl'>20 Day Ago</p>
-          
+          <p className='text-xl font-bold text-[#0066FF] mt-6'>{data?.price || ''}</p>
+
+          <p className='text-end text-xs font-medium'>{data?.posted}</p>
+
           <div className='flex justify-center mt-3'>
-            <button className='btn-ghost text-2xl font-bold flex gap-3 items-center'>View Details <FaArrowRightLong /></button>
+            <button className='btn-ghost text-base font-bold flex gap-2 items-center'>View Details <FaArrowRightLong className='text-primary' /></button>
           </div>
           <div className="bg-blue-600 p-1 my-8 rounded-lg"></div>
         </div>
