@@ -4,6 +4,7 @@ import { FaRegUser } from "react-icons/fa";
 // import logo from "../assets/img/logo.png";
 import { IoIosNotifications } from "react-icons/io";
 import { BiSolidMessageSquareDetail } from "react-icons/bi";
+import { MdPersonAddAlt1 } from "react-icons/md";
 
 
 
@@ -24,11 +25,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="navbar bg-[#0066FF] shadow-2xl px-10 text-[white] font-medium border ">
-          <div className=" mx-auto ">
+        <div className="flex bg-[#0066FF] shadow-2xl  text-[white] font-semibold">
+          <div className=" mx-auto w-5/6 flex">
             <div className="nav">
-              <nav>
-                <ul className=" flex flex-row justify-center items-center gap-8">
+              <nav className="text-[14px]">
+                <ul className=" flex flex-row justify-center items-center gap-8 py-[12px]">
                   <li className="">
                     {" "}
                     <NavLink to={"/"}>Home</NavLink>{" "}
@@ -68,18 +69,21 @@ const Navbar = () => {
                 </ul>
               </nav>
             </div>
-            <div className="nav-left ml-6  flex ">
-              <li className="px-5 list-none "> En/বাংলা </li>
-              <div className="sign-up flex flex-row justify-around  items-center ">
+            <div className="nav-left ml-6  flex justify-center items-center">
+              <div>
+                <li className="px-5 list-none text-[14px]"> En/বাংলা </li>
+              </div>
+              <div className="sign-up flex flex-row justify-around text-[14px]  items-center gap-2">
                 <span>
                   {" "}
-                  <FaRegUser />{" "}
+                  <MdPersonAddAlt1 className="text-xl " />{" "}
                 </span>
                 <NavLink to={"/login"}>Sign In</NavLink>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </>
   );
