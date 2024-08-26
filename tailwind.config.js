@@ -12,6 +12,8 @@ export default {
         },
         colors: {
           primary: '#0066FF',
+          color_blue: '#0066ff',
+          light_blue: '#80b3ff',
         }
       },
     },
