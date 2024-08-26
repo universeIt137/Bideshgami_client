@@ -61,7 +61,7 @@ const HeroSection = () => {
 
             <div className="flex gap-4 justify-between mb-3 max-w-[322px] mx-auto text-[13px] flex-wrap">
 
-              <select className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-1  min-w-[123px] h-[33px] rounded-xl'>
+              <select className='bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-1  min-w-[123px] h-[33px] rounded-xl'>
                 <option value="">Select Country</option>
                 <option value="Bangladesh">Bangladesh</option>
                 <option value="Afganistan">Afganistan</option>
@@ -70,6 +70,10 @@ const HeroSection = () => {
                 <option value="Turkey">Turkey</option>
                 <option value="Franch">Franch</option>
               </select>
+
+              
+
+
 
               <select className=' bg-blue-600 rounded-xl text-white font-semibold border-0 px-1 min-w-[111px] hover:bg-blue-500 h-[33px]'>
                 <option value="">Type of work</option>

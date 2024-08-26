@@ -44,7 +44,7 @@ const BasicRoutes = createBrowserRouter([
                 element: <SuccessfullyPassPage></SuccessfullyPassPage>
             },
             {
-                path: 'about-us',
+                path: '/about-us',
                 element: <AboutUs />
             }
 
