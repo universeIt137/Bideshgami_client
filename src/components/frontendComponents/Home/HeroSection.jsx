@@ -59,7 +59,7 @@ const HeroSection = () => {
         <div className='absolute bottom-9p left-1/2  w-full  transform -translate-x-1/2 px-10'>
           <div className='text-center p-5 max-w-[574px] mx-auto rounded-lg bg-white mainBoxShadow justify-center'>
 
-            <div className="flex gap-4 justify-between mb-3 max-w-[322px] mx-auto text-[13px] flex-wrap">
+            <div className="flex  justify-between mb-3 max-w-[322px] mx-auto text-[13px] flex-wrap">
 
               <select className='bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-1  min-w-[123px] h-[33px] rounded-xl'>
                 <option value="">Select Country</option>

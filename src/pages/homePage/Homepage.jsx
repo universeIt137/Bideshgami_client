@@ -5,12 +5,14 @@ import HeroSection from '../../components/frontendComponents/Home/HeroSection';
 
 
 const Homepage = () => {
-    return (
-      <>
-        <HeroSection/>
-        <WorkSection/>
-      </>
-    );
+  return (
+    <>
+      <HeroSection />
+      <div className="mb-10">
+        <WorkSection />
+      </div>
+    </>
+  );
 };
 
 export default Homepage;
