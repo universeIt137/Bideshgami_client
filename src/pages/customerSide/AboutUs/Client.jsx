@@ -13,7 +13,7 @@ const Client = () => {
                     <div className="flex  justify-around p-10 mx-auto">
                         <div className=" text-white text-center">
                             <div className="avatar">
-                                <div className="ring-primary ring-offset-base-100  rounded-full ring ring-offset-2 w-60">
+                                <div className="rounded-full ring  w-60">
                                     <img src="https://www.corporatephotographerslondon.com/wp-content/uploads/2023/02/LinkedIn_Profile_Photo.jpg" />
                                 </div>
                             </div>
@@ -22,7 +22,7 @@ const Client = () => {
                         </div>
                         <div className=" text-white text-center">
                             <div className="avatar">
-                                <div className="ring-primary ring-offset-base-100  rounded-full ring ring-offset-2 w-60">
+                                <div className="ring-offset-base-100  rounded-full ring ring-offset-2 w-60">
                                     <img src="https://www.for-image.com/wp-content/uploads/2023/01/LinkedIn-studio-headshot-photographer-london-1024x1024.jpg" />
                                 </div>
                             </div>
@@ -32,7 +32,7 @@ const Client = () => {
                         </div>
                         <div className=" text-white text-center">
                             <div className="avatar">
-                                <div className="ring-primary ring-offset-base-100  rounded-full ring ring-offset-2 w-60">
+                                <div className=" ring-offset-base-100  rounded-full ring ring-offset-2 w-60">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5NTBNBrHAvaW_hEYgujDAUqbLQ1j0R22ANw&s" />
                                 </div>
                             </div>
