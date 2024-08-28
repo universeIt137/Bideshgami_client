@@ -43,7 +43,7 @@ const Navbar = () => {
       </li>
       <li  >
         {" "}
-        <NavLink to={"/hotel-booking"}>Hotel Ashik </NavLink>{" "}
+        <NavLink to={"/hotel-booking"}>Hotel Booking </NavLink>{" "}
       </li>
       <li  >
         {" "}
