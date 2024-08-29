@@ -9,6 +9,9 @@ import ChangePasswordPage from '../pages/UserPage/ChangePasswordPage';
 import OtpPage from '../pages/UserPage/OtpPage';
 import SuccessfullyPassPage from '../pages/UserPage/SuccessfullyPassPage';
 import AboutUs from '../pages/customerSide/AboutUs/AboutUs';
+import PrivacyPage from '../pages/customerSide/privacyPage/PrivacyPage';
+import ApplyForm from '../pages/customerSide/applyForm/ApplyForm';
+import ServicePage from '../pages/customerSide/servicePage/ServicePage';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -46,6 +49,18 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: '/about-us',
                 element: <AboutUs />
+            },
+            {
+                path: "/privacy",
+                element: <PrivacyPage></PrivacyPage>
+            },
+            {
+                path: "/apply-form",
+                element: <ApplyForm></ApplyForm>
+            },
+            {
+                path: "/service-details",
+                element: <ServicePage></ServicePage>
             }
 
         ]

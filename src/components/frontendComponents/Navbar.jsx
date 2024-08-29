@@ -77,9 +77,9 @@ const Navbar = () => {
 
 
         {/* MobileView Navbar  */}
-        <div className=" ">
+        <div className="md:hidden">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -108,7 +108,7 @@ const Navbar = () => {
 
         {/* Desktop views navlinks */}
 
-        <div className=" bg-[#0066FF] shadow-2xl px-10 text-white font-medium  overflow-hidden py-3 lg:flex justify-center items-center hidden">
+        <div className="bg-[#0066FF] shadow-2xl  px-10 text-white font-medium  overflow-hidden py-3 lg:flex justify-center items-center hidden">
           <Container>
             <div className="nav w-full">
               <nav>
