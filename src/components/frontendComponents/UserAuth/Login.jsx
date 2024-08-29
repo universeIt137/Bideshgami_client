@@ -13,19 +13,19 @@ const Login = () => {
 
   return (
     <Container>
-      <div className="p-5 py-10">
+      <div className="p-5 py-10 w-10/12 mx-auto">
         <div className=" bg-white flex items-center justify-center border-2 border-gray-300 rounded-xl">
           <div className="mx-auto">
             <div className="card shadow-md rounded-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div className="hidden md:block">
+               
                   <img
-                    className="w-full rounded-lg"
+                    className=" rounded-lg"
                     src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723106697/Rectangle_145_s9ipdg.png"
                     alt="loginimg"
                   />
-                </div>
-                <div className="text-center md:text-left px-6">
+                
+                <div className="text-center md:text-left px-6 py-32">
                   <h2 className="text-blue-600 font-bold text-[44px] mb-6 text-center">Log In</h2>
                   <input
                     className="w-full py-2 px-3 border-b-2 border-gray-500 focus:outline-none focus:border-blue-600 mb-4"
