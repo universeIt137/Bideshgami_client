@@ -20,7 +20,7 @@ const Banner = () => {
                         <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1724664990/Bideshgami%20images/About%20Us/hnxjw3ro9els1i2lj36v.png" alt="" />
                     </div>
                 </div>
-                <p className='pt-10'>
+                <p className='pt-10 px-10'>
                     ${text}
                 </p>
             </section>

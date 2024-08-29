@@ -18,7 +18,8 @@ const Footer = () => {
                         <p>Career</p>
                         <p>Refund Policy</p>
                         <p>EMI Policy</p>
-                        <p>Privacy Policy</p>
+                        <Link to={"/privacy"}><p>Privacy Policy</p></Link>
+                        <Link to={"/apply-form"}><p>Apply Form</p></Link>
 
                     </div>
 
