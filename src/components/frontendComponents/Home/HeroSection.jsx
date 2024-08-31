@@ -71,10 +71,6 @@ const HeroSection = () => {
                 <option value="Franch">Franch</option>
               </select>
 
-              
-
-
-
               <select className=' bg-blue-600 rounded-xl text-white font-semibold border-0 px-1 min-w-[111px] hover:bg-blue-500 h-[33px]'>
                 <option value="">Type of work</option>
                 <option value="Labour">Labour</option>
@@ -82,7 +78,14 @@ const HeroSection = () => {
                 <option value="Programmer">Programmer</option>
               </select>
 
-              <button className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-5 h-[33px] rounded-xl'><MdOutlineSettingsInputComponent /></button>
+              <div className="hidden lg:flex">
+                <button className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-5 h-[33px] rounded-xl'><MdOutlineSettingsInputComponent /></button>
+              </div>
+
+              <div className="w-1/2 mx-auto mt-1 lg:hidden">
+                <button className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-5 h-[33px] rounded-xl'><MdOutlineSettingsInputComponent /></button>
+              </div>
+
             </div>
             <div className="relative max-w-[322px] mx-auto">
               <input type="text" className="grow rounded-xl  text-center h-9 w-full inputShadow" placeholder="Search in Bideshgami" />
