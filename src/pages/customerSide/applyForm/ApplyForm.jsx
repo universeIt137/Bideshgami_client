@@ -250,17 +250,10 @@ const ApplyForm = () => {
                         </div>
 
 
-
-
-
-
-
-
-
                         <div className=" mt-8 flex justify-between">
                             <div className="flex gap-2 text-[14px] items-center">
                                 <input type="checkbox" defaultChecked className="checkbox checkbox-primary" />
-                                <p>*Condition Applied.</p>
+                                <p>*I Agree to the website terms and conditions and privacy policy.</p>
                             </div>
                             <div className="text-[14px]">
                                 <button onClick={toggleVisibility}>Add More Apply</button>
