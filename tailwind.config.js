@@ -11,9 +11,9 @@ export default {
           inter: ['Inter', 'sans-serif'],
         },
         colors: {
-          primary: '#0066FF',
-          color_blue: '#0066ff',
+          primary: '#0066ff',
           light_blue: '#80b3ff',
+         
         }
       },
     },
