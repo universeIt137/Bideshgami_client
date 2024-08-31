@@ -20,6 +20,7 @@ const Footer = () => {
                         <p>EMI Policy</p>
                         <Link to={"/privacy"}><p>Privacy Policy</p></Link>
                         <Link to={"/apply-form"}><p>Apply Form</p></Link>
+                        <Link to={"/service-details"}><p>Service Page</p></Link>
 
                     </div>
 
