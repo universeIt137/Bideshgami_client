@@ -10,7 +10,7 @@ const AddCard = () => {
                 </div>
 
                 {/* informations */}
-                <div className="w-4/6 bg-gray-200 lg:p-0 ">
+                <div className="w-4/6 bg-gray-200 lg:p-0 p-3">
                     <div className="lg:p-5">
                         <p className='lg:text-xl font-bold'>Italy Work Permit</p>
 

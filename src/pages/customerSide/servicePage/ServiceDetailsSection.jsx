@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FaChevronDown, FaRegHeart } from 'react-icons/fa';
+import { FaChevronDown, FaHeart, FaRegHeart } from 'react-icons/fa';
 import { IoChatbubbleEllipsesSharp, IoShareSocialOutline } from 'react-icons/io5';
+import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 const Alldata = [
@@ -105,7 +106,8 @@ const description = `
 
 const ServiceDetailsSection = () => {
     const [show, setShow] = useState(false);
-    console.log(show);
+    const [favourite, setFavourite] = useState(false);
+    console.log(favourite);
     const trimmedText = description?.slice(0, 300);
     return (
         <>
@@ -119,32 +121,67 @@ const ServiceDetailsSection = () => {
                         </div>
 
                         <div className="flex items-center gap-2  px-1 rounded-lg">
-                            <div className="bg-[#edf0f8] flex items-center gap-2 p-2 rounded-lg">
+                            <div className="bg-[#edf0f8] flex items-center lg:gap-2 p-3 rounded-lg">
                                 <div>
                                     <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1724930954/Bideshgami%20images/Icons/qshxbmfhzjdxus1ujysm.png" className='' alt="" />   </div>
-                                <p>205 Total Apply</p>
+                                <p className='text-[12px] lg:text-xl'>205 Total Apply</p>
                             </div>
 
-                            <div className="text-[#d46f77] bg-[#edf0f8] flex items-center gap-2 p-2 rounded-lg">
+                            <div className="text-[#d46f77] bg-[#edf0f8] flex items-center gap-2 p-3 rounded-lg">
                                 <p><FaRegHeart /></p>
-                                <p>109</p>
+                                <p className='text-[12px] lg:text-xl'>109</p>
                             </div>
 
-                            <div className="bg-[#edf0f8] p-2 text-2xl rounded-lg">
-                                <IoShareSocialOutline />
+
+                            <div className="">
+                                <details className="dropdown">
+                                    <summary className="btn  lg:text-3xl text-[14px]"><IoShareSocialOutline /></summary>
+                                    <ul className="menu dropdown-content w-40 bg-base-100 rounded-box z-[1] shadow">
+                                        <li>
+                                            <div className='flex'>
+                                                <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1725094453/Bideshgami%20images/Service%20Details/icons/lgkcc9uyopazkhb27gg6.png" alt="" />
+                                                <p>Whatsapp</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                        <div className='flex'>
+                                                <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1725094665/Bideshgami%20images/Service%20Details/icons/aoxhask0uuvb0oghka9t.png" alt="" />
+                                                <p>Facebook</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                        <div className='flex'>
+                                                <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1725094710/Bideshgami%20images/Service%20Details/icons/unz1s3jpqjmkvo1n0exy.png" alt="" />
+                                                <p>Gmail</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                        <div className='flex'>
+                                                <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1725094751/Bideshgami%20images/Service%20Details/icons/xnec9o5a5tstgb07xocj.png" alt="" />
+                                                <p>Copy Link</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </details>
                             </div>
 
-                            <div className="bg-[#edf0f8] p-2 text-2xl rounded-lg">
-                                <p className='text-primary'><FaRegHeart /></p>
+
+                            <div onClick={() => setFavourite(!favourite)} className="bg-[#edf0f8] p-2 text-2xl rounded-lg cursor-pointer">
+                                {
+                                    favourite ? <p className='text-primary p-1 text-xl'><FaRegHeart /></p>
+                                        : <p className='text-primary p-1 text-xl'><FaHeart /></p>
+                                }
+
                             </div>
                         </div>
                     </div>
                 </seciton>
 
                 <section className="overview-section mt-5 ">
-                    <div className="lg:flex justify-between gap-5">
+                    <div className="lg:flex justify-between gap-5 ">
                         {/* image section */}
-                        <div className=" lg:w-1/2">
+                        <div className=" lg:w-1/2 mb-4">
                             <div className="">
                                 <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1724930487/Bideshgami%20images/Service%20Details/yrcssubd6lxfudhkd9ha.png" className='w-full' alt="" />
                             </div>
@@ -164,7 +201,7 @@ const ServiceDetailsSection = () => {
                             </div>
                         </div>
                         {/* info section  */}
-                        <div className=" lg:w-1/2">
+                        <div className="lg:w-1/2">
                             {/* button section  */}
                             <div className="flex justify-center gap-4">
                                 <button className="btn bg-primary text-white lg:btn-wide lg:text-xl"><IoChatbubbleEllipsesSharp />Chat</button>
@@ -172,8 +209,8 @@ const ServiceDetailsSection = () => {
                             </div>
 
                             {/* information section  */}
-                            <div className="lg:p-3 lg:mt-5">
-                                <p className='lg:text-4xl font-bold'>Work Permit Visa in Romania</p>
+                            <div className="lg:p-3 mt-5">
+                                <p className='lg:text-4xl text-2xl font-bold'>Work Permit Visa in Romania</p>
                                 <p className='text-gray-600 font-bold py-3'>Work Permit Visa </p>
                                 <p className='text-3xl font-bold text-primary'>BDT 70,000</p>
                                 <div className="flex items-center gap-3 border-b-2">
@@ -185,7 +222,7 @@ const ServiceDetailsSection = () => {
                             </div>
 
                             {/* table data  */}
-                            <div className="space-y-2 lg:p-3">
+                            <div className="space-y-2 p-3">
                                 {
                                     Alldata?.map((data) =>
                                         <div key={data.id} className="grid grid-cols-2">
@@ -202,7 +239,7 @@ const ServiceDetailsSection = () => {
                     </div>
                 </section>
 
-                <section className="description-section ">
+                <section className="description-section">
                     <div className="p-5">
                         <p className='text-3xl font-bold lg:mt-20 mt-4'>Description</p>
                         <p>
@@ -217,7 +254,11 @@ const ServiceDetailsSection = () => {
                                     }
                                 </button>
                             </p>
-                            <FaChevronDown className='text-primary' />
+                            {
+                                show ? <MdOutlineKeyboardArrowUp className='text-primary' /> : <MdOutlineKeyboardArrowDown className='text-primary' />
+                            }
+
+
                         </div>
                     </div>
                 </section>

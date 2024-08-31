@@ -1,5 +1,20 @@
-import React from 'react';
+
 import AddCard from './AddCard';
+
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
+
 
 const adds = [
     {
@@ -16,21 +31,49 @@ const adds = [
 
 const AddSection = () => {
     return (
-        <div className='border container mx-auto'>
-            <div className=" border-b-2 w-11/12 mx-auto">
-                <p className='p-10 text-2xl text-gray-500 '>Similar Ads</p>
+        <>
+
+            <div className='border container mx-auto mb-10 pb-5'>
+                <div className=" border-b-2 w-11/12 mx-auto">
+                    <p className='p-10 text-2xl text-gray-500 '>Similar Ads</p>
+                </div>
+
+                <Swiper
+                   pagination={true} modules={[Pagination, Navigation]} className="mySwiper"
+                >
+                    <SwiperSlide>
+                        <div className="grid lg:grid-cols-2 gap-10 p-10">
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className="grid lg:grid-cols-2 gap-10 p-10">
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className="grid lg:grid-cols-2 gap-10 p-10">
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                            <AddCard></AddCard>
+                        </div>
+                    </SwiperSlide>
+
+                </Swiper>
+                <div className="border-b-2 my-5 h-5 w-11/12 mx-auto"></div>
+                <p className='text-primary text-end px-10'>See all ads from this member</p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-10 p-10">
-                <AddCard></AddCard>
-                <AddCard></AddCard>
-                <AddCard></AddCard>
-                <AddCard></AddCard>
-                
-            </div>
-
-
-        </div>
+        </>
     );
 };
 
