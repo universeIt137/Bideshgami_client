@@ -10,6 +10,7 @@ import { useState } from 'react';
 import Share from './Share';
 import { MdFavoriteBorder } from 'react-icons/md';
 const VisaDetails = () => {
+    window.scrollTo(0, 0);
     const btnStyle = `bg-primary text-white w-[200px] text-[15px] font-semibold py-1.5 rounded-md transition-all duration-300 active:scale-90`
     const [seeMore, setSeeMore] = useState(false)
     return (

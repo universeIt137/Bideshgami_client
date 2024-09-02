@@ -144,20 +144,20 @@ const ServiceDetailsSection = () => {
                                             </div>
                                         </li>
                                         <li>
-                                        <div className='flex'>
+                                            <div className='flex'>
                                                 <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1725094665/Bideshgami%20images/Service%20Details/icons/aoxhask0uuvb0oghka9t.png" alt="" />
                                                 <p>Facebook</p>
                                             </div>
                                         </li>
                                         <li>
-                                        <div className='flex'>
+                                            <div className='flex'>
                                                 <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1725094710/Bideshgami%20images/Service%20Details/icons/unz1s3jpqjmkvo1n0exy.png" alt="" />
                                                 <p>Gmail</p>
                                             </div>
                                         </li>
 
                                         <li>
-                                        <div className='flex'>
+                                            <div className='flex'>
                                                 <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1725094751/Bideshgami%20images/Service%20Details/icons/xnec9o5a5tstgb07xocj.png" alt="" />
                                                 <p>Copy Link</p>
                                             </div>
@@ -238,31 +238,34 @@ const ServiceDetailsSection = () => {
                         </div>
                     </div>
                 </section>
-
-                <section className="description-section">
-                    <div className="p-5">
-                        <p className='text-3xl font-bold lg:mt-20 mt-4'>Description</p>
-                        <p>
-                            {show ? description : trimmedText}
-                        </p>
-
-                        <div className="flex items-center gap-2 justify-end">
-                            <p className='text-end text-primary'>
-                                <button onClick={() => setShow(!show)}>
-                                    {
-                                        show ? "Show Less" : "Show More"
-                                    }
-                                </button>
-                            </p>
-                            {
-                                show ? <MdOutlineKeyboardArrowUp className='text-primary' /> : <MdOutlineKeyboardArrowDown className='text-primary' />
-                            }
-
-
-                        </div>
-                    </div>
-                </section>
             </div>
+            
+            <div className='container mx-auto '>
+            <p className='text-3xl font-bold lg:mt-20 mt-4 ml-4 lg:ml-0'>Description</p>
+            </div>
+            <section className="description-section container mx-auto border my-5">
+                <div className="p-5">
+                    
+                    <p>
+                        {show ? description : trimmedText}
+                    </p>
+
+                    <div className="flex items-center gap-2 justify-end">
+                        <p className='text-end text-primary'>
+                            <button onClick={() => setShow(!show)}>
+                                {
+                                    show ? "Show Less" : "Show More"
+                                }
+                            </button>
+                        </p>
+                        {
+                            show ? <MdOutlineKeyboardArrowUp className='text-primary' /> : <MdOutlineKeyboardArrowDown className='text-primary' />
+                        }
+
+
+                    </div>
+                </div>
+            </section>
         </>
     );
 }

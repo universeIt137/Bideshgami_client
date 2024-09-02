@@ -7,6 +7,7 @@ import FooterBanner from './FooterBanner';
 
 
 const ServicePage = () => {
+    window.scrollTo(0, 0);
     return (
         <div>
             <ServiceBanner></ServiceBanner>

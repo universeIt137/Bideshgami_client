@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaFacebook, FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 const LoginPage = () => {
+  window.scrollTo(0, 0);
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {

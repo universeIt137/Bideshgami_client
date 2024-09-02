@@ -13,6 +13,7 @@ import PrivacyPage from '../pages/customerSide/privacyPage/PrivacyPage';
 import ApplyForm from '../pages/customerSide/applyForm/ApplyForm';
 import ServicePage from '../pages/customerSide/servicePage/ServicePage';
 import QRpage from '../pages/customerSide/qrPage/QRpage';
+import RefundPolicy from '../pages/customerSide/refundPolicy/RefundPolicy';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -66,6 +67,10 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: "/qr-page",
                 element: <QRpage></QRpage>
+            },
+            {
+                path: "/refund-policy",
+                element: <RefundPolicy></RefundPolicy>
             }
 
         ]

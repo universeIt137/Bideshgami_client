@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import InputWithHint from './InputWithHint';
 
 const ApplyForm = () => {
-
+    window.scrollTo(0, 0);
     const [isVisible, setIsVisible] = useState(true); // Initially visible
 
     // Handle the toggle button click to change visibility
