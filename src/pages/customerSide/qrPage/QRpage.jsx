@@ -2,6 +2,7 @@ import React from 'react';
 import Table from './Table';
 
 const QRpage = () => {
+    window.scrollTo(0, 0);
     return (
         <>
             <div className="w-3/4 shadow-xl bg-gray-200 mx-auto mt-10 rounded-xl mb-24 pb-10">

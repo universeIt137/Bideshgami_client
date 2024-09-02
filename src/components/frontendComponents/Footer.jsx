@@ -16,7 +16,7 @@ const Footer = () => {
                         <p>Home</p>
                         <p>Terms & conditions</p>
                         <p>Career</p>
-                        <p>Refund Policy</p>
+                        <Link to={"/refund-policy"}><p>Refund Policy</p></Link>
                         <Link to={"/qr-page"}><p>QR Page</p></Link>
                         <Link to={"/privacy"}><p>Privacy Policy</p></Link>
                         <Link to={"/apply-form"}><p>Apply Form</p></Link>

@@ -5,7 +5,7 @@ import './index.css';
 import './App.css';
 import "./assets/css/style.css"
 import { HelmetProvider } from 'react-helmet-async'
-import { RouterProvider } from 'react-router-dom'
+import { RouterProvider, BrowserRouter } from 'react-router-dom'
 import BasicRoutes from './routes/BasicRoutes.jsx';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -15,7 +15,9 @@ import { Toaster } from 'react-hot-toast';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <RouterProvider router={BasicRoutes} />
+      
+        <RouterProvider router={BasicRoutes} />
+      
       <Toaster />
     </HelmetProvider>
   </React.StrictMode>,
