@@ -12,6 +12,7 @@ import AboutUs from '../pages/customerSide/AboutUs/AboutUs';
 import PrivacyPage from '../pages/customerSide/privacyPage/PrivacyPage';
 import ApplyForm from '../pages/customerSide/applyForm/ApplyForm';
 import ServicePage from '../pages/customerSide/servicePage/ServicePage';
+import QRpage from '../pages/customerSide/qrPage/QRpage';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -61,6 +62,10 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: "/service-details",
                 element: <ServicePage></ServicePage>
+            },
+            {
+                path: "/qr-page",
+                element: <QRpage></QRpage>
             }
 
         ]

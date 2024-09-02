@@ -17,7 +17,7 @@ const Footer = () => {
                         <p>Terms & conditions</p>
                         <p>Career</p>
                         <p>Refund Policy</p>
-                        <p>EMI Policy</p>
+                        <Link to={"/qr-page"}><p>QR Page</p></Link>
                         <Link to={"/privacy"}><p>Privacy Policy</p></Link>
                         <Link to={"/apply-form"}><p>Apply Form</p></Link>
                         <Link to={"/service-details"}><p>Service Page</p></Link>
