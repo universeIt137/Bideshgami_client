@@ -186,19 +186,21 @@ const ServiceDetailsSection = () => {
                                 <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1724930487/Bideshgami%20images/Service%20Details/yrcssubd6lxfudhkd9ha.png" className='w-full' alt="" />
                             </div>
 
-                            <div className="border border-[#0066ff] p-10 mt-10 rounded-lg">
-                                <div className=" flex flex-col items-center p-5">
-                                    <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1724932402/Bideshgami%20images/Service%20Details/osok0gttfslw9b4wootu.png" alt="" />
-                                    <p className='text-2xl font-bold'>
-                                        Stay Alert: Avoid Online Scams
-                                    </p>
-                                    <p>
-                                        Never share card details or OTPs, and always verify items in person before
-                                        payment. Bikroy does not offer a delivery service. Stay vigilant!
-                                    </p>
+                            <Link to="/safety-tips">
+                                <div className="border border-[#0066ff] p-10 mt-10 rounded-lg">
+                                    <div className=" flex flex-col items-center p-5">
+                                        <img src="https://res.cloudinary.com/dnvmj9pvk/image/upload/v1724932402/Bideshgami%20images/Service%20Details/osok0gttfslw9b4wootu.png" alt="" />
+                                        <p className='text-2xl font-bold'>
+                                            Stay Alert: Avoid Online Scams
+                                        </p>
+                                        <p>
+                                            Never share card details or OTPs, and always verify items in person before
+                                            payment. Bikroy does not offer a delivery service. Stay vigilant!
+                                        </p>
+                                    </div>
+                                    <p className='text-end'>See all safety tips</p>
                                 </div>
-                                <p className='text-end'>See all safety tips</p>
-                            </div>
+                            </Link>
                         </div>
                         {/* info section  */}
                         <div className="lg:w-1/2">
@@ -239,13 +241,13 @@ const ServiceDetailsSection = () => {
                     </div>
                 </section>
             </div>
-            
+
             <div className='container mx-auto '>
-            <p className='text-3xl font-bold lg:mt-20 mt-4 ml-4 lg:ml-0'>Description</p>
+                <p className='text-3xl font-bold lg:mt-20 mt-4 ml-4 lg:ml-0'>Description</p>
             </div>
             <section className="description-section container mx-auto border my-5">
                 <div className="p-5">
-                    
+
                     <p>
                         {show ? description : trimmedText}
                     </p>

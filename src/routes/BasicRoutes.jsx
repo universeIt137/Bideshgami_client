@@ -14,6 +14,9 @@ import ApplyForm from '../pages/customerSide/applyForm/ApplyForm';
 import ServicePage from '../pages/customerSide/servicePage/ServicePage';
 import QRpage from '../pages/customerSide/qrPage/QRpage';
 import RefundPolicy from '../pages/customerSide/refundPolicy/RefundPolicy';
+import TermCondition from '../pages/customerSide/termCondition/TermCondition';
+import SafetyTips from '../pages/customerSide/safetyTips/SafetyTips';
+import AirTicket from '../pages/customerSide/airTicket/AirTicket';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -71,6 +74,18 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: "/refund-policy",
                 element: <RefundPolicy></RefundPolicy>
+            },
+            {
+                path: "/term-condition",
+                element: <TermCondition></TermCondition>
+            },
+            {
+                path: "/safety-tips",
+                element: <SafetyTips></SafetyTips>
+            },
+            {
+                path: "/air-ticket",
+                element: <AirTicket></AirTicket>
             }
 
         ]
