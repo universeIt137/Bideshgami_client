@@ -14,8 +14,8 @@ const Footer = () => {
                     <div className=' flex flex-col basis-1/4 space-y-2'>
                         <p className='text-2xl'>Discover</p>
                         <p>Home</p>
-                        <p>Terms & conditions</p>
                         <p>Career</p>
+                        <Link to={"/term-condition"}><p>Terms & conditions</p></Link>
                         <Link to={"/refund-policy"}><p>Refund Policy</p></Link>
                         <Link to={"/qr-page"}><p>QR Page</p></Link>
                         <Link to={"/privacy"}><p>Privacy Policy</p></Link>
