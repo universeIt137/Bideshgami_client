@@ -59,9 +59,9 @@ const HeroSection = () => {
         <div className='absolute bottom-9p left-1/2  w-full  transform -translate-x-1/2 px-10'>
           <div className='text-center p-5 max-w-[574px] mx-auto rounded-lg bg-white mainBoxShadow justify-center'>
 
-            <div className="flex gap-4 justify-between mb-3 max-w-[322px] mx-auto text-[13px] flex-wrap">
+            <div className="flex gap-4 justify-between mb-3 max-w-[350px] mx-auto text-[13px]">
 
-              <select className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-1  min-w-[123px] h-[33px] rounded-xl'>
+              <select className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-3  min-w-[133px] h-[33px] rounded-xl'>
                 <option value="">Select Country</option>
                 <option value="Bangladesh">Bangladesh</option>
                 <option value="Afganistan">Afganistan</option>
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 <option value="Franch">Franch</option>
               </select>
 
-              <select className=' bg-blue-600 rounded-xl text-white font-semibold border-0 px-1 min-w-[111px] hover:bg-blue-500 h-[33px]'>
+              <select className=' bg-blue-600 rounded-xl text-white font-semibold border-0 px-3 w-[121px] hover:bg-blue-500 h-[33px]'>
                 <option value="">Type of work</option>
                 <option value="Labour">Labour</option>
                 <option value="Lawyer">Lawyer</option>
@@ -80,7 +80,7 @@ const HeroSection = () => {
 
               <button className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-5 h-[33px] rounded-xl'><MdOutlineSettingsInputComponent /></button>
             </div>
-            <div className="relative max-w-[322px] mx-auto">
+            <div className="relative max-w-[350px] mx-auto">
               <input type="text" className="grow rounded-xl  text-center h-9 w-full inputShadow" placeholder="Search in Bideshgami" />
               <p className="rounded-full bg-blue-600 text-white absolute right-1.5 top-1.5 size-6 flex justify-center items-center">
                 <IoSearchSharp className="text-[15px]" />

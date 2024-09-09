@@ -129,7 +129,7 @@ const WorkSection = () => {
 
     return (
         <Container>
-            <div className="pt-12 px-5">
+            <div className="px-5">
                 <div>
                     <div className='container mx-auto'>
                         {/* // other work */}

@@ -8,7 +8,7 @@ const Homepage = () => {
     return (
       <>
         <HeroSection/>
-        <WorkSection/>
+       <div className='pb-14'> <WorkSection/></div>
       </>
     );
 };

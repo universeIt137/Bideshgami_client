@@ -10,27 +10,29 @@ const PriceCard = ({ data }) => {
   return (
     <>
       <div className="card bg-base-100 shadow-lg w-[278px]">
-        <figure className="">
+        <figure className="min-h-[162px]">
           <img
             src={data?.image || ''}
             alt="Shoes"
-            className="rounded-t-xl w-full  h-[162px] object-cover" />
+            className="rounded-t-xl w-full  h-full object-cover" />
         </figure>
-        <div className="w-11/12 mx-auto mt-1">
-          <div className='flex justify-between items-center text-xl'>
-            <div>
-              <h2 className="text-lg font-medium">{data?.title || ''}</h2>
+        <div className="w-11/12 mx-auto mt-1 h-full flex flex-col justify-between">
+          <div>
+            <div className='flex justify-between items-center text-xl'>
+              <div>
+                <h2 className="text-lg font-medium">{data?.title || ''}</h2>
+              </div>
+              <div><CiHeart className='text-xl text-primary' /></div>
             </div>
-            <div><CiHeart className='text-xl text-primary' /></div>
-          </div>
-          <p className='text-xl font-bold text-[#0066FF] mt-6'>{data?.price || ''}</p>
+            <p className='text-xl font-bold text-[#0066FF] mt-6'>{data?.price || ''}</p>
 
-          <p className='text-end text-xs font-medium'>{data?.posted}</p>
+            <p className='text-end text-xs font-medium'>{data?.posted}</p>
 
-          <div className='flex justify-center mt-3'>
-            <button className='btn-ghost text-base font-bold flex gap-2 items-center'>View Details <FaArrowRightLong className='text-primary' /></button>
+            <div className='flex justify-center mt-1.5'>
+              <button className='py-1.5 px-4 hover:bg-gray-300 rounded-md transition-all duration-300 active:scale-90  text-base font-bold flex gap-2 items-center'>View Details <FaArrowRightLong className='text-primary' /></button>
+            </div>
           </div>
-          <div className="bg-blue-600 p-1 my-8 rounded-lg"></div>
+          <div className="bg-blue-600 p-1  mb-8 rounded-lg"></div>
         </div>
       </div>
     </>
