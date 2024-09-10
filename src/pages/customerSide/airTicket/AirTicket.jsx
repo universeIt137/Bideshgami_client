@@ -15,14 +15,14 @@ import { Pagination } from 'swiper/modules';
 const AirTicket = () => {
     return (
         <div>
-            <div className="">
+            <div className="z-20">
             <AirTicketBanner></AirTicketBanner>
             </div>
 
             
 
             {/* Slider section  */}
-            <div className="lg:mt-80 mt-[780px] container mx-auto  flex justify-center">
+            <div className="lg:mt-[420px] mt-[780px] container mx-auto  flex justify-center z-10">
                 <Swiper
                     pagination={{
                         dynamicBullets: true,
