@@ -3,15 +3,10 @@ import { IoIosAirplane } from "react-icons/io";
 import { airports } from "../../../airportArray";
 import { IoAirplane } from "react-icons/io5";
 
-const AllAirportDropDown = ({ selectedAirport, setSelectedAirport, openNext = false, handleOpenNext }) => {
+const AllAirportDropDown = ({ selectedAirport,  handleAirportSelection }) => {
 
     const handleChangeAirport = (airport) => {
-        setSelectedAirport(airport);
-        if (openNext) {
-            handleOpenNext(true)
-            // console.log(handleOpenNext);
-
-        }
+        handleAirportSelection(airport)
     }
     return (
         <div className="w-full h-[350px] shadow-xl allAirportDropDown rounded-lg   bg-white overflow-y-auto  space-y-3">
