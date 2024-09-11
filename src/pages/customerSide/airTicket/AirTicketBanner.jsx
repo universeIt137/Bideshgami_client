@@ -29,6 +29,18 @@ const AirTicketBanner = () => {
                             <input
                                 type="radio"
                                 name="tripType"
+                                value="oneWay"
+                                className="radio radio-primary"
+                                checked={tripType === 'oneWay'}
+                                onChange={handleChange}
+                            />
+                            <span className='font-bold'>One Way</span>
+                        </div>
+
+                        <div className="flex justify-center gap-2">
+                            <input
+                                type="radio"
+                                name="tripType"
                                 value="roundTrip"
                                 className="radio radio-primary"
                                 checked={tripType === 'roundTrip'}
@@ -36,7 +48,6 @@ const AirTicketBanner = () => {
                             />
                             <span className='font-bold'>Round Trip</span>
                         </div>
-
                         <div className="flex justify-center gap-2">
                             <input
                                 type="radio"
@@ -51,7 +62,7 @@ const AirTicketBanner = () => {
                     </div>
 
                     {/* Select destination section  */}
-                    <Destination />
+                    <Destination tripType={tripType}  setTripType={setTripType} />
 
                     {
                         tripType === 'multiCity' && <Destination />

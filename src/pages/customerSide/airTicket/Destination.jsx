@@ -5,8 +5,11 @@ import { FaArrowRightArrowLeft } from "react-icons/fa6";
 import { airports } from "../../../airportArray";
 import AllAirportDropDown from "./AllAirportDropDown";
 import TravelerDropDown from "./TravelerDropDown";
+import Departure from "./Departure";
+import VisibleDay from "./VisibleDay";
+import Return from "./Return";
 
-const Destination = () => {
+const Destination = ({ tripType, setTripType }) => {
     const [selectedAirport1, setSelectedAirport1] = useState(airports[0]);
     const [selectedAirport2, setSelectedAirport2] = useState(airports[1]);
     const [travelers, setTravelers] = useState({
@@ -15,13 +18,34 @@ const Destination = () => {
         kids: 0,
         infants: 0
     });
+    const [bookingClass, setBookingClass] = useState('Economy');
     const [isOpenFirstAirportDropdown, setIsOpenFirstAirportDropdown] = useState(false);
     const [isOpenSecondAirportDropdown, setIsOpenSecondAirportDropdown] = useState(false);
     const [isOpenTravelerDropDown, setIsOpenTravelerDropDown] = useState(false);
-
-
+    const [openDeparture, setOpenDeparture] = useState(false);
+    const [departureDate, setDepartureDate] = useState(new Date());
+    const [openReturn, setOpenReturn] = useState(false);
+    const [returnDate, setReturnDate] = useState([
+        {
+            startDate: departureDate,
+            endDate: null,
+            key: 'selection'
+        }
+    ]);
     // Handle clicking outside the dropdown to close it
+    useEffect(() => {
 
+        if (tripType !== 'roundTrip') {
+            setReturnDate([
+                {
+                    startDate: departureDate,
+                    endDate: null,
+                    key: 'selection'
+                }
+            ])
+        }
+
+    }, [tripType])
     const toggleDropdown1 = () => {
         setIsOpenFirstAirportDropdown(!isOpenFirstAirportDropdown);
         setIsOpenSecondAirportDropdown(false); // Close the second dropdown when the first is clicked
@@ -42,14 +66,60 @@ const Destination = () => {
     // Handle selection from the second dropdown
     const handleSelectAirport2 = (airport) => {
         setSelectedAirport2(airport);
-        setIsOpenSecondAirportDropdown(false);  // Close the second dropdown
+        setIsOpenSecondAirportDropdown(false);
+        setOpenDeparture(true)  // Close the second dropdown
     };
 
     const handleToggleDesignation = () => {
         setSelectedAirport1(selectedAirport2);
         setSelectedAirport2(selectedAirport1);
     };
+    const handleOpenReturnDate = () => {
+        setOpenReturn(true)
+        if (returnDate[0]?.endDate === null) {
+            setReturnDate([
+                {
+                    startDate: departureDate,
+                    endDate: departureDate,
+                    key: 'selection'
+                }
+            ])
+        }
+        if (tripType === 'oneWay') {
+            setTripType('roundTrip')
+        }
+    }
+    const handleDepartureDate = (date) => {
+        setDepartureDate(date)
+        setOpenDeparture(false)
+        setReturnDate([
+            {
+                startDate: departureDate,
+                endDate: null,
+                key: 'selection'
+            }
+        ])
+        if (tripType === 'roundTrip') {
+            setOpenReturn(true)
 
+            setReturnDate([
+                {
+                    startDate: date,
+                    endDate: date,
+                    key: 'selection'
+                }
+            ])
+
+        } else {
+            setIsOpenTravelerDropDown(true)
+        }
+    }
+
+    const handleReturnDate = (date) => {
+        setReturnDate(date)
+        setOpenReturn(false)
+        setIsOpenTravelerDropDown(true)
+    }
     return (
         <div className="grid grid-cols-2 gap-2 pt-5 ">
             {/* from to section */}
@@ -102,25 +172,38 @@ const Destination = () => {
                 </div>
             </div>
 
-            {/* Depature return section */}
+            {/* Departure return section */}
             <div className="grid grid-cols-2 gap-2">
-                <div className="flex w-full">
-                    <div className="border p-3 rounded-l-lg text-gray-400 w-1/2">
+                <div className="flex w-full relative">
+                    <div onClick={() => setOpenDeparture(true)} className={`border p-3 rounded-l-lg text-gray-500 w-1/2 ${openDeparture ? "bg-gray-200" : "bg-white"}`}>
                         <p className="flex items-center gap-2">
-                            Depature
+                            Departure
                             <FaChevronDown />
                         </p>
-                        <p className="lg:text-xl font-bold">Aug 24</p>
-                        <p className="text-[12px]">Wednesday</p>
-                    </div>
+                        <VisibleDay comingDay={departureDate} />
 
-                    <div className="border p-3 rounded-r-lg text-gray-400 w-1/2">
+                    </div>
+                    {openDeparture && (
+                        <div className="bg-white z-30 absolute left-0 top-[100px] w-max">
+                            <Departure setDepartureDate={setDepartureDate} departureDate={departureDate} handleDepartureDate={handleDepartureDate} setIsOpen={setOpenDeparture} />
+                        </div>
+                    )}
+                    <div onClick={handleOpenReturnDate} className={`border p-3 rounded-r-lg text-gray-500 w-1/2 ${openReturn ? "bg-gray-200" : "bg-white"}`}>
                         <p className="flex items-center gap-2">
                             Return <FaChevronDown />
                         </p>
-                        <p className="text-[12px]">Tap to book return ticket</p>
-                        <p className="text-[12px]">for more savings</p>
+                        {
+                            returnDate[0]?.endDate === null ? <>
+                                <p className="text-[12px]">Tap to book return ticket</p>
+                                <p className="text-[12px]">for more savings</p>
+                            </> : <VisibleDay comingDay={returnDate[0]?.endDate} />
+                        }
                     </div>
+                    {openReturn && (
+                        <div className="bg-white z-30 absolute left-0 top-[100px] w-max">
+                            <Return handleReturnDate={handleReturnDate} setReturnDate={setReturnDate} returnDate={returnDate} setIsOpen={setOpenReturn} />
+                        </div>
+                    )}
                 </div>
 
                 {/* Booking class section */}
@@ -128,10 +211,10 @@ const Destination = () => {
                     <div onClick={() => setIsOpenTravelerDropDown(true)} className="border p-3 rounded-lg text-gray-500 w-full cursor-pointer">
                         <p className="flex items-center gap-2">Travelers & Booking Class</p>
                         <p className="lg:text-xl font-bold">{Object.values(travelers).reduce((a, b) => a + b)} Travelers</p>
-                        <p className="">Economy</p>
+                        <p className="">{bookingClass}</p>
                     </div>
                     {
-                        isOpenTravelerDropDown && <div className="w-full absolute left-0 top-[100px] z-30"><TravelerDropDown travelers={travelers} setTravelers={setTravelers} setIsOpen={setIsOpenTravelerDropDown} /></div>
+                        isOpenTravelerDropDown && <div className="w-full absolute left-0 top-[100px] z-30"><TravelerDropDown travelers={travelers} bookingClass={bookingClass} setBookingClass={setBookingClass} setTravelers={setTravelers} setIsOpen={setIsOpenTravelerDropDown} /></div>
                     }
                 </div>
 
