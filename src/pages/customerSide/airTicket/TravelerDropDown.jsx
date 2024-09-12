@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useRef, useState } from 'react';
-import { FaPlus } from 'react-icons/fa';
+import React, { useEffect, useRef } from 'react';
 import { FiMinus, FiPlus } from 'react-icons/fi';
 
-const TravelerDropDown = ({ travelers, setTravelers, setIsOpen,bookingClass, setBookingClass }) => {
+const TravelerDropDown = ({ setIsOpen, handleIncrement, handleDecrement, handleBookingClassChange, travelers, bookingClassType = '' }) => {
     const dropdownRef = useRef(null);
-     // State to manage booking class
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -17,25 +15,16 @@ const TravelerDropDown = ({ travelers, setTravelers, setIsOpen,bookingClass, set
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, []);
+    }, [setIsOpen]);
 
-    const handleIncrement = (category) => {
-        setTravelers(prevState => ({
-            ...prevState,
-            [category]: prevState[category] + 1
-        }));
-    };
-
-    const handleDecrement = (category) => {
-        if (travelers[category] > 0) {
-            setTravelers(prevState => ({
-                ...prevState,
-                [category]: prevState[category] - 1
-            }));
-        }
-    };
-    
     const isBookingFull = Object.values(travelers).reduce((a, b) => a + b, 0) >= 9;
+
+    const travelerCategories = {
+        adults: '12 years and above',
+        children: '5 years - under 12 years',
+        kids: '2 years - under 5 years',
+        infants: 'below 2 years',
+    };
 
     return (
         <div ref={dropdownRef} className="bg-white p-3 rounded-lg shadow-lg w-full min-w-max">
@@ -43,24 +32,24 @@ const TravelerDropDown = ({ travelers, setTravelers, setIsOpen,bookingClass, set
             {isBookingFull && <p className="text-sm text-red-500 mb-4 font-medium">Maximum 9 passengers are allowed per booking</p>}
 
             <div className="space-y-4">
-                {[{ category: 'adults', slogan: '12 years and above' }, { category: 'children', slogan: '5 years - under 12 years' }, { category: 'kids', slogan: '2 years - under 5 years' }, { category: 'infants', slogan: 'below 2 years' }].map((category, index) => (
+                {Object.keys(travelers).map((category, index) => (
                     <div key={index} className="flex justify-between items-center">
                         <div>
-                            <p className="capitalize text-gray-500">{category?.category}</p>
-                            <p className='text-xs text-black'>{category?.slogan}</p>
+                            <p className="capitalize text-gray-500">{category}</p>
+                            <p className='text-xs text-black'>{travelerCategories[category]}</p>
                         </div>
                         <div className="flex items-center space-x-2 gap-3">
                             <button
                                 className="text-2xl"
-                                onClick={() => handleDecrement(category?.category)}
-                                disabled={travelers[category?.category] === 0}
+                                onClick={() => handleDecrement(category)}
+                                disabled={travelers[category] === 0}
                             >
                                 <FiMinus />
                             </button>
-                            <span className="text-lg font-medium">{travelers[category?.category]}</span>
+                            <span className="text-lg font-medium">{travelers[category]}</span>
                             <button
                                 className="text-2xl"
-                                onClick={() => handleIncrement(category?.category)}
+                                onClick={() => handleIncrement(category)}
                                 disabled={isBookingFull}
                             >
                                 <FiPlus />
@@ -78,10 +67,10 @@ const TravelerDropDown = ({ travelers, setTravelers, setIsOpen,bookingClass, set
                             type="radio"
                             name="class"
                             value="Economy"
-                            checked={bookingClass === 'Economy'}
-                            onChange={() => setBookingClass('Economy')}
+                            checked={bookingClassType === 'Economy'}
+                            onChange={() => handleBookingClassChange('Economy')}
                             className="mr-2"
-                        /> 
+                        />
                         Economy
                     </label>
                     <label className="flex items-center">
@@ -89,10 +78,10 @@ const TravelerDropDown = ({ travelers, setTravelers, setIsOpen,bookingClass, set
                             type="radio"
                             name="class"
                             value="Premium Economy"
-                            checked={bookingClass === 'Premium Economy'}
-                            onChange={() => setBookingClass('Premium Economy')}
+                            checked={bookingClassType === 'Premium Economy'}
+                            onChange={() => handleBookingClassChange('Premium Economy')}
                             className="mr-2"
-                        /> 
+                        />
                         Premium Economy
                     </label>
                     <label className="flex items-center">
@@ -100,10 +89,10 @@ const TravelerDropDown = ({ travelers, setTravelers, setIsOpen,bookingClass, set
                             type="radio"
                             name="class"
                             value="Business"
-                            checked={bookingClass === 'Business'}
-                            onChange={() => setBookingClass('Business')}
+                            checked={bookingClassType === 'Business'}
+                            onChange={() => handleBookingClassChange('Business')}
                             className="mr-2"
-                        /> 
+                        />
                         Business
                     </label>
                     <label className="flex items-center">
@@ -111,10 +100,10 @@ const TravelerDropDown = ({ travelers, setTravelers, setIsOpen,bookingClass, set
                             type="radio"
                             name="class"
                             value="First Class"
-                            checked={bookingClass === 'First Class'}
-                            onChange={() => setBookingClass('First Class')}
+                            checked={bookingClassType === 'First Class'}
+                            onChange={() => handleBookingClassChange('First Class')}
                             className="mr-2"
-                        /> 
+                        />
                         First Class
                     </label>
                 </div>

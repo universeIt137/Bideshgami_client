@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { DateRange } from "react-date-range";
 
-const Return = ({ setIsOpen, returnDate, setReturnDate,handleReturnDate }) => {
+const Return = ({ setIsOpen, returnDate,handleReturnDate }) => {
     const dropdownRef = useRef(null);
 
 
