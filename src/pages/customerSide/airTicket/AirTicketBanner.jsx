@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoSearchSharp } from 'react-icons/io5';
 import { MdOutlineSettingsInputComponent } from 'react-icons/md';
 import './airTicket.css';
@@ -7,6 +7,8 @@ import { FaArrowRightArrowLeft } from 'react-icons/fa6';
 
 const AirTicketBanner = () => {
     window.scrollTo(0, 0);
+    const [show, setShow] = useState(false);
+    console.log(show);
     return (
         <div className='mb-10'>
             <div className='airHero-sec bg-cover bg-center relative h-56'>
@@ -18,12 +20,12 @@ const AirTicketBanner = () => {
                         {/* Radio Button Section  */}
                         <div className="flex gap-5 lg:ml-10 items-center">
                             <div className="flex justify-center gap-2">
-                                <input type="radio" name="radio-2" className="radio radio-primary" defaultChecked />
+                                <input type="radio" name="radio-2" onClick={()=>setShow(false)} className="radio radio-primary" defaultChecked />
                                 <span className='font-bold'>Round Trip</span>
                             </div>
 
                             <div className="flex justify-center gap-2">
-                                <input type="radio" name="radio-2" className="radio radio-primary" />
+                                <input type="radio" name="radio-2" onClick={()=>setShow(true)} className="radio radio-primary" />
                                 <span className='font-bold'>Multi City</span>
                             </div>
 
@@ -78,7 +80,7 @@ const AirTicketBanner = () => {
                             </div>
                         </div>
 
-                        <div className="lg:flex gap-2 pt-5 ">
+                        <div className={`lg:flex gap-2 pt-5`}>
 
                             {/* from to section  */}
                             <div className="flex lg:w-2/5">
