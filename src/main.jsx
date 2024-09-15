@@ -12,12 +12,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Toaster } from 'react-hot-toast';
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      
-        <RouterProvider router={BasicRoutes} />
-      
+
+      <RouterProvider router={BasicRoutes} />
+
       <Toaster />
     </HelmetProvider>
   </React.StrictMode>,

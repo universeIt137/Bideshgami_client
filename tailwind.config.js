@@ -6,15 +6,13 @@ export default {
   ],
   theme: {
     extend: {
-      extend: {
-        fontFamily: {
-          inter: ['Inter', 'sans-serif'],
-        },
-        colors: {
-          primary: '#0066ff',
-          light_blue: '#80b3ff',
-         
-        }
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        primary: '#0066ff',
+        light_blue: '#80b3ff',
+       
       },
     },
   },

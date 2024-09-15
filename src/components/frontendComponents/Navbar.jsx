@@ -35,7 +35,7 @@ const Navbar = () => {
       </li>
       <li  >
         {" "}
-        <NavLink to={"/visaDetails"}>Visa Details</NavLink>{" "}
+        <NavLink to={"/"}>Visa Processing</NavLink>{" "}
       </li>
       <li  >
         {" "}
