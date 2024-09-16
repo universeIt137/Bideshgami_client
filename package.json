@@ -11,6 +11,7 @@
     "start": "vite"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.1.10",
     "bootstrap": "^5.3.3",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",

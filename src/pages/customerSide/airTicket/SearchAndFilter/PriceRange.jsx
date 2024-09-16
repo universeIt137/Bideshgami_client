@@ -1,9 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
-const PriceRange = () => {
-    const [price, setPrice] = useState(5250); // Initial price
-    const minPrice = 4266;
-    const maxPrice = 5250;
+const PriceRange = ({ price, setPrice, minPrice, maxPrice }) => {
+    
 
     const handlePriceChange = (e) => {
         setPrice(e.target.value);
@@ -18,7 +17,7 @@ const PriceRange = () => {
                 onChange={handlePriceChange}
                 className="range range-info" />
             <div className="mt-2 font-medium text-gray-700 text-base">
-                <span>{minPrice.toLocaleString()} tk</span> -  
+                <span>{minPrice.toLocaleString()} tk</span> -
                 <span> {price.toLocaleString()} tk</span>
             </div>
         </div>

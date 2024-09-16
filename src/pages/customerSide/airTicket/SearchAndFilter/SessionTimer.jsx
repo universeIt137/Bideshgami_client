@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
-const SessionTimer = () => {
-    const [minutes, setMinutes] = useState(20);
-    const [seconds, setSeconds] = useState(0);
+const SessionTimer = ({ minutes, setMinutes, seconds, setSeconds }) => {
+    
 
     useEffect(() => {
         const countdown = setInterval(() => {
