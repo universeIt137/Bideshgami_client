@@ -3,6 +3,7 @@ import './airTicket.css';
 import Destination from './Destination';
 import { airports } from '../../../airportArray';
 import Destination1 from './Destination1';
+import GlobalBanner from '../../../shared/GlobalBanner';
 
 const AirTicketBanner = () => {
     const [tripType, setTripType] = useState('oneWay'); // State for radio selection
@@ -90,9 +91,7 @@ const AirTicketBanner = () => {
 
     return (
         <div className='relative'>
-            <div className='h-56 w-full overflow-hidden -z-10'>
-                <img className='w-full h-full' src={'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099479/heroSec_yhfbnr.png'} alt="" />
-            </div>
+            <GlobalBanner/>
             <div className='mt-[-112px] bg-white z-20'>
 
 

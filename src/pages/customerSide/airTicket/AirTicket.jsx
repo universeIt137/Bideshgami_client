@@ -11,12 +11,15 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import SearchedAndFilter from './SearchAndFilter/SearchedAndFilter';
 
 const AirTicket = () => {
     return (
         <div>
             <div className="z-20 pb-32">
             <AirTicketBanner></AirTicketBanner>
+            
+            <SearchedAndFilter/>
             </div>
 
             

@@ -17,6 +17,7 @@ import RefundPolicy from '../pages/customerSide/refundPolicy/RefundPolicy';
 import TermCondition from '../pages/customerSide/termCondition/TermCondition';
 import SafetyTips from '../pages/customerSide/safetyTips/SafetyTips';
 import AirTicket from '../pages/customerSide/airTicket/AirTicket';
+import WorkPermit from '../pages/customerSide/WorkPermit/WorkPermit';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: '/about-us',
                 element: <AboutUs />
+            },
+            {
+                path: '/work-permit',
+                element: <WorkPermit />
             },
             {
                 path: "/privacy",
