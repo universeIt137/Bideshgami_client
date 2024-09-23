@@ -243,7 +243,7 @@ const ServiceDetailsSection = () => {
             </div>
 
             <div className='container mx-auto '>
-                <p className='text-3xl font-bold lg:mt-20 mt-4 ml-4 lg:ml-0'>Description</p>
+                <p className='text-3xl font-bold lg:mt-10 mt-4 ml-4 lg:ml-0'>Description</p>
             </div>
             <section className="description-section container mx-auto border my-5">
                 <div className="p-5">

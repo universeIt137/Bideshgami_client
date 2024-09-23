@@ -33,7 +33,7 @@ const AddSection = () => {
     return (
         <>
 
-            <div className='border container mx-auto mb-10 pb-5'>
+            <div className='border container mx-auto mb-10 '>
                 <div className=" border-b-2 w-11/12 mx-auto">
                     <p className='p-10 text-2xl text-gray-500 '>Similar Ads</p>
                 </div>
