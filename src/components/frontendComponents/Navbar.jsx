@@ -23,7 +23,7 @@ const Navbar = () => {
       </li>
       <li  >
         {" "}
-        <NavLink to={"/work-permit"}>Work Permit</NavLink>{" "}
+        <NavLink to={"/"}>Work Permit</NavLink>{" "}
       </li>
       <li  >
         {" "}
