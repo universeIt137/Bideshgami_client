@@ -18,7 +18,13 @@ import TermCondition from '../pages/customerSide/termCondition/TermCondition';
 import SafetyTips from '../pages/customerSide/safetyTips/SafetyTips';
 import AirTicket from '../pages/customerSide/airTicket/AirTicket';
 import WorkPermit from '../pages/customerSide/WorkPermit/WorkPermit';
-import MyProfile from '../pages/customerSide/MyProfile/MyProfile';
+import UserProfile from '../pages/UserDashboard/UserProfile/UserProfile';
+import UserDashBoardLayout from '../pages/UserDashboard/UserDashBoardLayout/UserDashBoardLayout';
+import UserDashboard from '../pages/UserDashboard/UserDashboard/UserDashboard';
+import ChangePassword from '../components/frontendComponents/UserAuth/ChangePassword';
+import ChangePass from '../pages/UserDashboard/ChangePass/ChangePass';
+import CheckApplication from '../pages/UserDashboard/CheckApplication/CheckApplication';
+import Message from '../pages/UserDashboard/CheckApplication/Message/Message';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -57,10 +63,7 @@ const BasicRoutes = createBrowserRouter([
                 path: '/about-us',
                 element: <AboutUs />
             },
-            {
-                path: '/my-profile',
-                element: <MyProfile />
-            },
+
             {
                 path: '/work-permit',
                 element: <WorkPermit />
@@ -96,7 +99,33 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: "/air-ticket",
                 element: <AirTicket></AirTicket>
-            }
+            },
+            {
+                path: "/user-dashboard",
+                element: <UserDashBoardLayout />,
+                children: [
+                    {
+                        path: '/user-dashboard',
+                        element: <UserDashboard />
+                    },
+                    {
+                        path: 'my-account',
+                        element: <UserProfile />
+                    },
+                    {
+                        path: 'change-password',
+                        element: <ChangePass />
+                    },
+                    {
+                        path: 'checking-status',
+                        element: <CheckApplication />
+                    },
+                    {
+                        path: 'message',
+                        element: <Message />
+                    },
+                ]
+            },
 
         ]
     },

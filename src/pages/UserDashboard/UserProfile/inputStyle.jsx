@@ -1,0 +1,1 @@
+export const inputStyle = 'inputStyle h-12 rounded-lg  outline-none focus:border focus:border-primary text-sm px-3' 

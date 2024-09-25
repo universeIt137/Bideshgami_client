@@ -14,6 +14,7 @@ import 'swiper/css/scrollbar';
 import { Toaster } from 'react-hot-toast';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>

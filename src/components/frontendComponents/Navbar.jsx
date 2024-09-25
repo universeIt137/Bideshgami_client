@@ -108,11 +108,11 @@ const Navbar = () => {
 
         {/* Desktop views navlinks */}
 
-        <div className="bg-[#0066FF] shadow-2xl  px-10 text-white font-medium  overflow-hidden py-3 lg:flex justify-center items-center hidden">
+        <div className="bg-[#0066FF] shadow-2xl  text-white font-medium  overflow-hidden py-3 lg:flex justify-center items-center hidden">
           <Container>
             <div className="nav w-full">
               <nav>
-                <ul className=" flex flex-wrap justify-between items-center text-sm ">
+                <ul className=" flex flex-wrap justify-between items-center text-sm  border-black">
                   {navlinks}
                 </ul>
               </nav>
