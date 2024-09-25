@@ -99,9 +99,9 @@ const Destination = ({ tripType, data = {}, tripAmount, setTripAmount, id = 0 })
     };
 
     return (
-        <div className="grid grid-cols-2 gap-2 pt-5">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 pt-5">
             {/* From to section */}
-            <div className="flex w-full">
+            <div className="flex flex-col md:flex-row w-full">
                 {/* first Airport  */}
                 <div className="w-full relative">
                     <div
@@ -129,7 +129,7 @@ const Destination = ({ tripType, data = {}, tripAmount, setTripAmount, id = 0 })
                 <div className="flex items-center justify-center">
                     <p
                         onClick={handleToggleDesignation}
-                        className="text-primary p-3 bg-white border rounded-[24px] -mx-10 shadow-2xl z-20 cursor-pointer"
+                        className="text-primary p-3 bg-white rotate-90 md:rotate-0 border rounded-[24px] -my-4 md:-my-0 ml-auto mr-10 md:-mx-10 shadow-2xl z-20 cursor-pointer"
                     >
                         <FaArrowRightArrowLeft />
                     </p>
@@ -161,7 +161,7 @@ const Destination = ({ tripType, data = {}, tripAmount, setTripAmount, id = 0 })
                 </div>
 
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {/* Departure return section */}
                 <div className="flex w-full relative">
                     <div onClick={() => setOpenDeparture(true)} className={`border p-3 text-gray-500 w-full ${openDeparture ? "bg-gray-200" : "bg-white"}`}>
@@ -172,7 +172,7 @@ const Destination = ({ tripType, data = {}, tripAmount, setTripAmount, id = 0 })
                         <VisibleDay comingDay={data.departureDate} />
                     </div>
                     {openDeparture && (
-                        <div className="bg-white z-30 absolute left-0 top-[100px] w-max">
+                        <div className="bg-white z-30 absolute left-0 top-[100px] w-max ">
                             <Departure departureDate={data.departureDate} handleDepartureDate={handleDepartureDate} setIsOpen={setOpenDeparture} />
                         </div>
                     )}

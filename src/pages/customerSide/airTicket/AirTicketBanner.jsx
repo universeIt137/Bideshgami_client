@@ -49,7 +49,10 @@ const AirTicketBanner = () => {
         };
 
         if (selectedFare === 'Umrah Fares') {
-            setTripType('roundTrip')
+            if (tripType === 'oneWay') {
+                setTripType('roundTrip')
+            }
+
         }
         if (selectedFare === 'Student Fares') {
             if (tripType === 'multiCity') {
@@ -88,10 +91,10 @@ const AirTicketBanner = () => {
         setSelectedFare(fareType);
     };
     // window.scrollTo(0, 0);
-
+    const fareType = ['Regular Fares', 'Student Fares', 'Umrah Fares', 'Seaman Fares']
     return (
         <div className='relative'>
-            <GlobalBanner/>
+            <GlobalBanner />
             <div className='mt-[-112px] bg-white z-20'>
 
 
@@ -161,68 +164,22 @@ const AirTicketBanner = () => {
                         </div>
 
                         <div className="lg:flex gap-3 mt-5">
-                            <div className="flex gap-2 flex-col lg:flex-row">
-                                <button
-                                    className={`${selectedFare === 'Regular Fares' ? 'bg-blue-200' : 'bg-blue-100'
-                                        } hover:bg-blue-200 text-gray-700 py-2 px-4 rounded-xl flex gap-2 items-center`}
-                                    onClick={() => handleFareChange('Regular Fares')}
-                                >
-                                    <input
-                                        type="radio"
-                                        name="radio-2"
-                                        className="radio1"
-                                        checked={selectedFare === 'Regular Fares'}
-                                        onChange={() => handleFareChange('Regular Fares')}
-                                    />
-                                    Regular Fares
-                                </button>
-
-                                <button
-                                    className={`${selectedFare === 'Student Fares' ? 'bg-blue-200' : 'bg-blue-100'
-                                        } hover:bg-blue-200 text-gray-700 py-2 px-4 rounded-xl inline-flex items-center gap-2`}
-                                    onClick={() => handleFareChange('Student Fares')}
-                                >
-                                    <input
-                                        type="radio"
-                                        name="radio-2"
-                                        className="radio1"
-                                        checked={selectedFare === 'Student Fares'}
-                                        onChange={() => handleFareChange('Student Fares')}
-                                    />
-                                    Student Fares
-                                </button>
-                            </div>
-
-                            <div className="flex gap-2 flex-col lg:flex-row mt-2 lg:mt-0">
-                                <button
-                                    className={`${selectedFare === 'Umrah Fares' ? 'bg-blue-200' : 'bg-blue-100'
-                                        } hover:bg-blue-200 text-gray-700 py-2 px-4 rounded-xl inline-flex items-center gap-2`}
-                                    onClick={() => handleFareChange('Umrah Fares')}
-                                >
-                                    <input
-                                        type="radio"
-                                        name="radio-2"
-                                        className="radio1"
-                                        checked={selectedFare === 'Umrah Fares'}
-                                        onChange={() => handleFareChange('Umrah Fares')}
-                                    />
-                                    Umrah Fares
-                                </button>
-
-                                <button
-                                    className={`${selectedFare === 'Seaman Fares' ? 'bg-blue-200' : 'bg-blue-100'
-                                        } hover:bg-blue-200 text-gray-700 py-2 px-4 rounded-xl inline-flex items-center gap-2`}
-                                    onClick={() => handleFareChange('Seaman Fares')}
-                                >
-                                    <input
-                                        type="radio"
-                                        name="radio-2"
-                                        className="radio1"
-                                        checked={selectedFare === 'Seaman Fares'}
-                                        onChange={() => handleFareChange('Seaman Fares')}
-                                    />
-                                    Seaman Fares
-                                </button>
+                            <div className="flex gap-2 flex-wrap">
+                                {
+                                    fareType.map((item, idx) => <button key={idx}
+                                        className={`bg-blue-100  text-gray-700 py-2 px-4 rounded-md flex gap-2 items-center`}
+                                        onClick={() => handleFareChange(item)}
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="radio-2"
+                                            className="radio1"
+                                            checked={selectedFare === item}
+                                            onChange={() => handleFareChange(item)}
+                                        />
+                                        {item}
+                                    </button>)
+                                }
                             </div>
                         </div>
                     </div>

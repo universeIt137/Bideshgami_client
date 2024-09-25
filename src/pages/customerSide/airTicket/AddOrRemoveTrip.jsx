@@ -52,7 +52,7 @@ const AddOrRemoveTrip = ({
         (tripAmount.length - 1) !== id ? (
             <div
                 onClick={handleDeleteTrip}
-                className="w-full relative border-2 rounded-lg p-2 flex justify-center items-center cursor-pointer"
+                className="w-full relative border-2 rounded-lg p-2 flex justify-center items-center cursor-pointer min-h-[100px]"
             >
                 <button className="flex items-center gap-1 text-lg font-bold text-red-500">
                     <FaMinusCircle /> Remove
@@ -63,14 +63,14 @@ const AddOrRemoveTrip = ({
                 tripAmount.length === 4 ? (
                     <div
                         onClick={handleDeleteTrip}
-                        className="w-full relative border-2 rounded-lg p-2 flex justify-center items-center cursor-pointer"
+                        className="w-full relative border-2 rounded-lg p-2 flex justify-center items-center cursor-pointer min-h-[100px]"
                     >
                         <button className="flex items-center gap-1 text-lg font-bold text-red-500">
                             <FaMinusCircle /> Remove
                         </button>
                     </div>
                 ) : (
-                    <div className="w-full relative border-2 rounded-lg p-2 flex justify-center items-center gap-2">
+                    <div className="w-full relative border-2 rounded-lg p-2 flex justify-center items-center gap-2 min-h-[100px]">
                         {addCityBtn}
                         {id !== 0 && (
                             <button

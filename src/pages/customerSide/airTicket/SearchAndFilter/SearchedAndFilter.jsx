@@ -38,7 +38,7 @@ const SearchedAndFilter = () => {
         });
     };
     return (
-        <div className="flex gap-5 lg:w-11/12 mx-auto">
+        <div className="flex flex-col lg:flex-row gap-5 lg:w-11/12 mx-auto">
             <div className="w-[500px] py-5 bg-white shadow-xl space-y-3">
                 <SessionTimer minutes={minutes} setMinutes={setMinutes} seconds={seconds} setSeconds={setSeconds} />
 

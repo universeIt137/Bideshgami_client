@@ -82,9 +82,9 @@ const Destination1 = ({ tripType, setTripType, trip1, setTrip1, travelers, setTr
     };
 
     return (
-        <div className="grid grid-cols-2 gap-2 pt-5">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 pt-5">
             {/* From to section */}
-            <div className="flex w-full">
+            <div className="flex flex-col md:flex-row w-full">
                 {/* first Airport */}
                 <div className="w-full relative">
                     <div
@@ -109,7 +109,7 @@ const Destination1 = ({ tripType, setTripType, trip1, setTrip1, travelers, setTr
                 <div className="flex items-center justify-center">
                     <p
                         onClick={handleToggleDesignation}
-                        className="text-primary p-3 bg-white border rounded-[24px] -mx-10 shadow-2xl z-20 cursor-pointer"
+                        className="text-primary p-3 bg-white rotate-90 md:rotate-0 border rounded-[24px] -my-4 md:-my-0 ml-auto mr-10 md:-mx-10 shadow-2xl z-20 cursor-pointer"
                     >
                         <FaArrowRightArrowLeft />
                     </p>
@@ -139,7 +139,7 @@ const Destination1 = ({ tripType, setTripType, trip1, setTrip1, travelers, setTr
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {/* Departure return section */}
                 <div className="flex w-full relative">
                     <div onClick={() => setOpenDeparture(true)} className={`border p-3 text-gray-500 ${tripType === 'multiCity' ? 'rounded-lg w-full' : 'rounded-l-lg w-1/2'} ${openDeparture ? "bg-gray-200" : "bg-white"}`}>
