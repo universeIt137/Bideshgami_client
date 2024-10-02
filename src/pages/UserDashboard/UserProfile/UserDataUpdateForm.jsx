@@ -125,8 +125,8 @@ const UserDataUpdateForm = ({ setEdit }) => {
                 </div>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-5">
-                <button onClick={() => setEdit(false)} className="w-[110px] h-12 border-2 rounded-lg border-black font-semibold text-lg flex items-center justify-center gap-1"><FaArrowLeftLong /> Back</button>
-                <button className="w-[110px] h-12 border-2 rounded-lg font-semibold text-lg border-primary text-primary">Save</button>
+                <button onClick={() => setEdit(false)} className="w-[110px] h-12 border-2 rounded-lg border-black font-semibold text-lg flex items-center justify-center gap-1 hover:bg-black hover:text-white transition-all duration-300"><FaArrowLeftLong /> Back</button>
+                <button className="w-[110px] h-12 border-2 rounded-lg font-semibold text-lg border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300">Save</button>
             </div>
         </div>
     );

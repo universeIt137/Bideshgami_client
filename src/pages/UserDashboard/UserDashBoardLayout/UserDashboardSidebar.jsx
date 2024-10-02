@@ -40,16 +40,16 @@ const UserDashboardSidebar = () => {
                     <Link to={'/user-dashboard'}>
                         <li
 
-                            className="flex items-center text-lg my-2"
+                            className={`flex items-center text-lg my-2 hover:bg-primary px-2 rounded-lg hover:text-white ${isDashboard && 'text-primary'}`}
                         >
-                            <span className="mr-2 text-lg"><img src={dashboardIcon} className='size-[18px] object-cover' /></span> <span className={`${isDashboard && 'text-primary'}`}>Dashboard</span>
+                            <span className="mr-2 text-lg"><img src={dashboardIcon} className='size-[18px] object-cover' /></span> <span className={``}>Dashboard</span>
                         </li>
                     </Link>
                     {menuItems.map((item, index) => (
                         <NavLink key={index} to={item?.link}>
                             <li
 
-                                className="flex items-center   text-lg my-2"
+                                className="flex items-center   text-lg my-2 hover:bg-primary px-2 rounded-lg hover:text-white transition-all duration-300"
                             >
                                 <span className="mr-2 text-lg">{item.icon}</span> <span className=''>{item.label}</span>
                             </li>
