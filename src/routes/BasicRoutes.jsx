@@ -25,6 +25,7 @@ import ChangePassword from '../components/frontendComponents/UserAuth/ChangePass
 import ChangePass from '../pages/UserDashboard/ChangePass/ChangePass';
 import CheckApplication from '../pages/UserDashboard/CheckApplication/CheckApplication';
 import Message from '../pages/UserDashboard/CheckApplication/Message/Message';
+import MyBooking from '../pages/UserDashboard/MyBooking/MyBooking';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -123,6 +124,10 @@ const BasicRoutes = createBrowserRouter([
                     {
                         path: 'message',
                         element: <Message />
+                    },
+                    {
+                        path: 'my-booking',
+                        element: <MyBooking />
                     },
                 ]
             },

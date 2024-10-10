@@ -4,6 +4,7 @@ import Container from "../../../shared/Container";
 import { FaCamera } from 'react-icons/fa';
 import UserData from './UserData';
 import UserDataUpdateForm from './UserDataUpdateForm';
+import { FiEdit } from 'react-icons/fi';
 const UserProfile = () => {
     const [edit, setEdit] = useState(false)
 
@@ -20,7 +21,7 @@ const UserProfile = () => {
                     <div className='space-y-3'>
                         <h1 className="text-4xl md:text-3xl font-bold"> Junayet Alam</h1>
                         {
-                            edit && <button className='px-2 h-[43px] border-2 border-primary rounded-lg flex items-center justify-center gap-2 text-primary'>
+                            edit && <button className=' px-2 h-[43px] border-2 border-primary rounded-lg flex items-center justify-center gap-2 text-primary'>
                                 <p className='bg-primary size-[30px] rounded-full flex justify-center items-center text-lg  text-white'>
                                     <FaCamera />
                                 </p>
@@ -29,8 +30,8 @@ const UserProfile = () => {
                         }
                     </div>
                 </div>
-                <button onClick={() => setEdit(true)} className={`mt-4 md:mt-0 px-4 py-2 border-black rounded-full border-2 text-black font-semibold text-lg items-center gap-2 w-[110px] h-[46px] justify-center ${edit ? 'hidden' : 'flex'}`}>
-                    <img className='size-4 object-cover' src={editIcon} alt="" />  Edit
+                <button onClick={() => setEdit(true)} className={`transition-all duration-300 hover:bg-primary hover:text-white hover:border-0 mt-4 md:mt-0 px-4 py-2 border-black rounded-full border-2 text-black font-semibold text-lg items-center gap-2 w-[110px] h-[46px] justify-center ${edit ? 'hidden' : 'flex'}`}>
+                <FiEdit />  Edit
                 </button>
             </div>
 

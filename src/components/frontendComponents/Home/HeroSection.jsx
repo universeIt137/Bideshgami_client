@@ -61,7 +61,7 @@ const HeroSection = () => {
 
             <div className="flex  justify-between mb-3 max-w-[322px] mx-auto text-[13px] flex-wrap">
 
-              <select className='bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-1  min-w-[123px] h-[33px] rounded-xl'>
+              <select className='bg-primary text-white font-semibold border-0 px-1  min-w-[123px] h-[33px] rounded-xl outline-none'>
                 <option value="">Select Country</option>
                 <option value="Bangladesh">Bangladesh</option>
                 <option value="Afganistan">Afganistan</option>
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 <option value="Franch">Franch</option>
               </select>
 
-              <select className=' bg-blue-600 rounded-xl text-white font-semibold border-0 px-1 min-w-[111px] hover:bg-blue-500 h-[33px]'>
+              <select className=' bg-primary rounded-xl text-white font-semibold border-0 px-1 min-w-[111px] h-[33px]'>
                 <option value="">Type of work</option>
                 <option value="Labour">Labour</option>
                 <option value="Lawyer">Lawyer</option>
@@ -79,7 +79,7 @@ const HeroSection = () => {
               </select>
 
               <div className="hidden lg:flex">
-                <button className=' bg-blue-600 text-white font-semibold border-0 hover:bg-blue-500 px-5 h-[33px] rounded-xl'><MdOutlineSettingsInputComponent /></button>
+                <button className=' bg-primary text-white font-semibold border-0 px-5 h-[33px] rounded-xl text-xl w-[60px]'><MdOutlineSettingsInputComponent /></button>
               </div>
 
               <div className="w-1/2 mx-auto mt-1 lg:hidden">
@@ -88,8 +88,8 @@ const HeroSection = () => {
 
             </div>
             <div className="relative max-w-[322px] mx-auto">
-              <input type="text" className="grow rounded-xl  text-center h-9 w-full inputShadow" placeholder="Search in Bideshgami" />
-              <p className="rounded-full bg-blue-600 text-white absolute right-1.5 top-1.5 size-6 flex justify-center items-center">
+              <input type="text" className="grow rounded-xl  text-center h-[34px] w-full inputShadow" placeholder="Search in Bideshgami" />
+              <p className="rounded-full bg-blue-600 text-white absolute right-2 top-1 size-6 flex justify-center items-center">
                 <IoSearchSharp className="text-[15px]" />
               </p>
             </div>

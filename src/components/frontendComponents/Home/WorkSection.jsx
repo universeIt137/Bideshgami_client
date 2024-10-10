@@ -137,7 +137,7 @@ const WorkSection = () => {
                             <p className='font-bold text-xl lg:text-3xl'>Work Permit </p>
                             {viewAll}
                         </div>
-                        <div className="flex flex-wrap justify-around gap-7">
+                        <div className="flex flex-wrap justify-around gap-4">
                             {
                                 workPermit?.map((item, idx) => <PriceCard key={idx} data={item}></PriceCard>)
                             }
@@ -148,7 +148,7 @@ const WorkSection = () => {
                             <p className='font-bold text-xl lg:text-3xl'>Student</p>
                             {viewAll}
                         </div>
-                        <div className="flex flex-wrap justify-around gap-7">
+                        <div className="flex flex-wrap justify-around gap-4">
                             {
                                 Student?.map((item, idx) => <PriceCard key={idx} data={item}></PriceCard>)
                             }
@@ -158,7 +158,7 @@ const WorkSection = () => {
                             <p className='font-bold text-xl lg:text-3xl'>Hajj & Umrah</p>
                             {viewAll}
                         </div>
-                        <div className="flex flex-wrap justify-around gap-7">
+                        <div className="flex flex-wrap justify-around gap-4">
                             {
                                 hajjUmrah?.map((item, idx) => <PriceCard key={idx} data={item}></PriceCard>)
                             }
@@ -169,7 +169,7 @@ const WorkSection = () => {
                             <p className='font-bold text-xl lg:text-3xl'>Tour Package</p>
                             {viewAll}
                         </div>
-                        <div className="flex flex-wrap justify-around gap-7">
+                        <div className="flex flex-wrap justify-around gap-4">
                             {
                                 tourPackage?.map((item, idx) => <PriceCard key={idx} data={item}></PriceCard>)
                             }

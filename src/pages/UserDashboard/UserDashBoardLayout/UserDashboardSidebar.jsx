@@ -5,22 +5,22 @@ import favoriteIcon from '../../../assets/userDashboardSidebar/icons/favorite.pn
 import checkStatusIcon from '../../../assets/userDashboardSidebar/icons/checkStatus.png'
 import changepassIcon from '../../../assets/userDashboardSidebar/icons/changepass.png'
 import logoutIcon from '../../../assets/userDashboardSidebar/icons/logout.png'
-import { MdAccountCircle } from "react-icons/md";
+import { MdAccountCircle, MdFavoriteBorder, MdLock, MdMessage } from "react-icons/md";
 import { Link, NavLink, useLocation, useParams } from 'react-router-dom'
+import { RiCalendarEventFill, RiShieldCheckFill } from 'react-icons/ri'
+import { TbDeviceHeartMonitorFilled } from 'react-icons/tb'
 const UserDashboardSidebar = () => {
     const { pathname } = useLocation();
     const isDashboard = pathname.split('/')[2] ? false : true;
     console.log(isDashboard);
 
     const menuItems = [
-
-
         { icon: <MdAccountCircle />, label: 'My Account', link: 'my-account' },
-        { icon: <img src={myBookingIcon} className='size-[18px] object-cover' />, label: 'My Booking', link: 'my-booking' },
-        { icon: <img src={messagesIcon} className='size-[18px] object-cover' />, label: 'Message', link: 'message' },
-        { icon: <img src={favoriteIcon} className='size-[18px] object-cover' />, label: 'Favorite', link: 'favorite' },
-        { icon: <img src={checkStatusIcon} className='size-[18px]  object-cover' />, label: 'Check Status', link: 'checking-status' },
-        { icon: <img src={changepassIcon} className='size-[18px] object-cover' />, label: 'Change Password', link: 'change-password' },
+        { icon: <RiCalendarEventFill />, label: 'My Booking', link: 'my-booking' },
+        { icon: <MdMessage />, label: 'Message', link: 'message' },
+        { icon: <MdFavoriteBorder/>, label: 'Favorite', link: 'favorite' },
+        { icon: <RiShieldCheckFill />, label: 'Check Status', link: 'checking-status' },
+        { icon: <MdLock />, label: 'Change Password', link: 'change-password' }
     ];
     return (
         <aside className="lg:min-w-[280px] lg:max-w-[280px] mainBoxShadow p-4 pb-10 border-b md:border-r h-max rounded-md" >
@@ -40,16 +40,16 @@ const UserDashboardSidebar = () => {
                     <Link to={'/user-dashboard'}>
                         <li
 
-                            className="flex items-center text-lg my-2"
+                            className={`flex items-center text-lg my-2 hover:bg-primary px-2 rounded-lg hover:text-white ${isDashboard && 'text-primary'}`}
                         >
-                            <span className="mr-2 text-lg"><img src={dashboardIcon} className='size-[18px] object-cover' /></span> <span className={`${isDashboard && 'text-primary'}`}>Dashboard</span>
+                            <span className="mr-2 text-lg"><TbDeviceHeartMonitorFilled /></span> <span className={``}>Dashboard</span>
                         </li>
                     </Link>
                     {menuItems.map((item, index) => (
                         <NavLink key={index} to={item?.link}>
                             <li
 
-                                className="flex items-center   text-lg my-2"
+                                className="flex items-center   text-lg my-2 hover:bg-primary px-2 rounded-lg hover:text-white transition-all duration-300"
                             >
                                 <span className="mr-2 text-lg">{item.icon}</span> <span className=''>{item.label}</span>
                             </li>
