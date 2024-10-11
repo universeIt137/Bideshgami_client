@@ -4,11 +4,11 @@ const InputWithHint = ({ name, type, placeholder, hintText, value, onChange }) =
     const [showHint, setShowHint] = useState(false);
 
     return (
-        <label className="input input-bordered flex items-center gap-2 relative">
+        <label className="input input-bordered flex items-center gap-2 relative  border-gray-600  border-2 h-[36px] rounded-md">
             <input
                 type={type}
                 name={name}
-                className="grow pr-[150px] text-[11px] lg:text-[14px]"
+                className="grow  text-[11px] lg:text-[14px] "
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}

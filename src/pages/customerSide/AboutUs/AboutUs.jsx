@@ -1,14 +1,17 @@
 
+import Container from '../../../shared/Container';
 import Banner from './Banner';
 import Client from './Client';
 import Mission from './Mission';
 const AboutUs = () => {
     window.scrollTo(0, 0);
     return (
-        <div>
+        <div className='pb-16'>
             <Banner />
-            <Mission />
-            <Client/>
+            <Container>
+                <Mission />
+                <Client/>
+            </Container>
         </div>
     );
 };

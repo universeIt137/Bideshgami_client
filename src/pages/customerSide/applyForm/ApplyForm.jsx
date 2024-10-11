@@ -23,7 +23,7 @@ const ApplyForm = () => {
         service: '',
         total: '',
     });
-
+const labelStyle = 'input input-bordered flex items-center gap-2 relative  border-2 rounded-md border-gray-600 h-[36px]'
     // Handle changes in the form fields
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -54,11 +54,11 @@ const ApplyForm = () => {
     };
 
     return (
-        <div className='border p-2 w-full   lg:w-3/4 mx-auto shadow-2xl mb-10 rounded-md'>
+        <div className='border p-2 w-full   max-w-[846px] mx-auto shadow-2xl mb-10 rounded-md my-16'>
             <p className='text-4xl text-center font-bold '>Apply Form</p>
-            <div className="border border-blue-400 rounded-xl m-5">
-                <section className='p-5 '>
-                    <form onSubmit={handleSubmit} className=''>
+            <section className='p-5 '>
+                <form onSubmit={handleSubmit} className='max-w-[774px] mx-auto'>
+                    <div className='  mx-auto border border-primary p-5'>
                         <div className={`grid md:grid-cols-2 gap-5 lg:gap-12`}>
                             <InputWithHint
                                 type="text"
@@ -100,24 +100,24 @@ const ApplyForm = () => {
                             >
                             </InputWithHint>
 
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className={`${labelStyle}`}>
                                 <input
                                     type="text"
                                     name="from"
                                     value={formData.from}
                                     onChange={handleChange}
-                                    className="grow pr-[150px] text-[11px] lg:text-[14px]"
+                                    className="grow  text-[11px] lg:text-[14px]"
                                     placeholder="From(Auto Fill)"
                                 />
                             </label>
 
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className={`${labelStyle}`}>
                                 <input
                                     type="text"
                                     name="to"
                                     value={formData.to}
                                     onChange={handleChange}
-                                    className="grow pr-[150px] text-[11px] lg:text-[14px]"
+                                    className="grow  text-[11px] lg:text-[14px]"
                                     placeholder="To(Auto Fill)"
                                 />
                             </label>
@@ -125,35 +125,99 @@ const ApplyForm = () => {
 
 
                         <div className="grid md:grid-cols-3 gap-4 mt-12">
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className={`${labelStyle}`}>
                                 <input
                                     type="text"
                                     name="service"
                                     value={formData.service}
                                     onChange={handleChange}
-                                    className="grow pr-[150px] text-[11px] lg:text-[14px]"
+                                    className="grow  text-[11px] lg:text-[14px]"
                                     placeholder="Service Type (Auto Fill)"
                                 />
                             </label>
 
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className={`${labelStyle}`}>
                                 <input
                                     type="text"
                                     name="total"
                                     value={formData.total}
                                     onChange={handleChange}
-                                    className="grow pr-[150px] text-[11px] lg:text-[14px]"
+                                    className="grow  text-[11px] lg:text-[14px]"
                                     placeholder="Total Pyment (Auto Fill)"
                                 />
                             </label>
 
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className={`${labelStyle}`}>
                                 <input
                                     type="text"
                                     name="due"
                                     value={formData.due}
                                     onChange={handleChange}
-                                    className="grow pr-[150px] text-[11px] lg:text-[14px]"
+                                    className="grow text-[11px] lg:text-[14px]"
+                                    placeholder="Due Pyment (Auto Fill)"
+                                />
+                            </label>
+                        </div>
+
+
+
+                        <div className={`grid md:grid-cols-2 gap-4 mt-12`}>
+                            <label className={`${labelStyle}`}>
+                                <input
+                                    type="text"
+                                    name="due"
+                                    value={formData.due}
+                                    onChange={handleChange}
+                                    className="grow    text-[11px] lg:text-[14px]"
+                                    placeholder="Due Pyment (Auto Fill)"
+                                />
+                            </label>
+
+                            <label className={`${labelStyle}`}>
+                                <input
+                                    type="text"
+                                    name="center"
+                                    value={formData.center}
+                                    onChange={handleChange}
+                                    className="grow    text-[11px] lg:text-[14px]"
+                                    placeholder="Choose Your Application Center"
+                                />
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className={`${isVisible ? '' : 'hidden'}   mx-auto border border-primary p-5 mt-5`}>
+
+                        <div className="grid md:grid-cols-3 gap-4">
+                            <label className={`${labelStyle}`}>
+                                <input
+                                    type="text"
+                                    name="service"
+                                    value={formData.service}
+                                    onChange={handleChange}
+                                    className="grow     text-[11px] lg:text-[14px]"
+                                    placeholder="Service Type (Auto Fill)"
+                                />
+                            </label>
+
+                            <label className={`${labelStyle}`}>
+                                <input
+                                    type="text"
+                                    name="total"
+                                    value={formData.total}
+                                    onChange={handleChange}
+                                    className="grow     text-[11px] lg:text-[14px]"
+                                    placeholder="Total Pyment (Auto Fill)"
+                                />
+                            </label>
+
+                            <label className={`${labelStyle}`}>
+                                <input
+                                    type="text"
+                                    name="due"
+                                    value={formData.due}
+                                    onChange={handleChange}
+                                    className="grow     text-[11px] lg:text-[14px]"
                                     placeholder="Due Pyment (Auto Fill)"
                                 />
                             </label>
@@ -162,117 +226,51 @@ const ApplyForm = () => {
 
 
                         <div className={`grid md:grid-cols-2 gap-4 mt-12 `}>
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className={`${labelStyle}`}>
                                 <input
                                     type="text"
                                     name="due"
                                     value={formData.due}
                                     onChange={handleChange}
-                                    className="grow lg:pr-[150px] text-[11px] lg:text-[14px]"
+                                    className="grow    text-[11px] lg:text-[14px]"
                                     placeholder="Due Pyment (Auto Fill)"
                                 />
                             </label>
 
-                            <label className="input input-bordered flex items-center gap-2">
+                            <label className={`${labelStyle}`}>
                                 <input
                                     type="text"
                                     name="center"
                                     value={formData.center}
                                     onChange={handleChange}
-                                    className="grow lg:pr-[150px] text-[11px] lg:text-[14px]"
+                                    className="grow    text-[11px] lg:text-[14px]"
                                     placeholder="Choose Your Application Center"
                                 />
                             </label>
                         </div>
-
-                        <div className={`${isVisible ? '' : 'hidden'} mt-5 p-5 lg:border border-blue-500 rounded-lg `}>
-
-                            <div className="grid md:grid-cols-3 gap-4 mt-12">
-                                <label className="input input-bordered flex items-center gap-2">
-                                    <input
-                                        type="text"
-                                        name="service"
-                                        value={formData.service}
-                                        onChange={handleChange}
-                                        className="grow pr-[150px] text-[11px] lg:text-[14px]"
-                                        placeholder="Service Type (Auto Fill)"
-                                    />
-                                </label>
-
-                                <label className="input input-bordered flex items-center gap-2">
-                                    <input
-                                        type="text"
-                                        name="total"
-                                        value={formData.total}
-                                        onChange={handleChange}
-                                        className="grow pr-[150px] text-[11px] lg:text-[14px]"
-                                        placeholder="Total Pyment (Auto Fill)"
-                                    />
-                                </label>
-
-                                <label className="input input-bordered flex items-center gap-2">
-                                    <input
-                                        type="text"
-                                        name="due"
-                                        value={formData.due}
-                                        onChange={handleChange}
-                                        className="grow pr-[150px] text-[11px] lg:text-[14px]"
-                                        placeholder="Due Pyment (Auto Fill)"
-                                    />
-                                </label>
-                            </div>
+                    </div>
 
 
-
-                            <div className={`grid md:grid-cols-2 gap-4 mt-12 `}>
-                                <label className="input input-bordered flex items-center gap-2">
-                                    <input
-                                        type="text"
-                                        name="due"
-                                        value={formData.due}
-                                        onChange={handleChange}
-                                        className="grow lg:pr-[150px] text-[11px] lg:text-[14px]"
-                                        placeholder="Due Pyment (Auto Fill)"
-                                    />
-                                </label>
-
-                                <label className="input input-bordered flex items-center gap-2">
-                                    <input
-                                        type="text"
-                                        name="center"
-                                        value={formData.center}
-                                        onChange={handleChange}
-                                        className="grow lg:pr-[150px] text-[11px] lg:text-[14px]"
-                                        placeholder="Choose Your Application Center"
-                                    />
-                                </label>
-                            </div>
+                    <div className=" mt-8 flex justify-between">
+                        <div className="flex gap-2 text-[14px] items-center">
+                            <input type="checkbox" defaultChecked className="checkbox checkbox-primary" />
+                            <p>*I Agree to the website terms and conditions and privacy policy.</p>
                         </div>
+                        <div className="text-[14px]">
+                            <button onClick={toggleVisibility}>Add More Apply</button>
 
-
-                        <div className=" mt-8 flex justify-between">
-                            <div className="flex gap-2 text-[14px] items-center">
-                                <input type="checkbox" defaultChecked className="checkbox checkbox-primary" />
-                                <p>*I Agree to the website terms and conditions and privacy policy.</p>
-                            </div>
-                            <div className="text-[14px]">
-                                <button onClick={toggleVisibility}>Add More Apply</button>
-
-                            </div>
                         </div>
+                    </div>
 
 
 
-                        <div className="mx-auto w-40  flex justify-center">
-                            <button type="submit" className="bg-blue-600 py-2 hover:bg-blue-700 px-10 rounded-lg mt-4 col-span-2 text-white">
-                                Submit
-                            </button>
-                        </div>
-                    </form>
-                </section>
-
-
-            </div>
+                    <div className="mx-auto w-40  flex justify-center">
+                        <button type="submit" className="bg-blue-600 py-2 hover:bg-blue-700 px-10 rounded-lg mt-4 col-span-2 text-white">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </section>
 
 
         </div>
