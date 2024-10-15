@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './HeroSection.css';
 import { MdOutlineSearch, MdOutlineSettingsInputComponent } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -6,10 +6,12 @@ import tourPackage from '../../../assets/icon/honeymoon.png'
 
 import HomePageSliderSection from "./HomePageSliderSection";
 import { IoSearchSharp } from "react-icons/io5";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { FaAngleDown } from "react-icons/fa6";
 
 const HeroSection = () => {
-
-
+  const [selectedCountry, setSelectedCountry] = useState('Select Country')
   let dataIcon = [
     {
       id: 1,
@@ -57,24 +59,55 @@ const HeroSection = () => {
       title: 'Question'
     }
   ]
+  const { data: allCountry = [], isLoading } = useQuery({
+    queryKey: ['popularCategories'],
+    queryFn: async () => {
+      const res = await axios.get('https://restcountries.com/v3.1/all');
+      // Sorting the countries alphabetically by their common name
+      const sortedCountries = res.data.sort((a, b) =>
+        a.name.common.localeCompare(b.name.common)
+      );
+      return sortedCountries;
+    }
+  });
+
+  if (isLoading) {
+    return '';
+  }
+
+  console.log(allCountry.length);
+
   return (
     <>
       {/* Hero Section  */}
-      <div className='hero-sec bg-cover bg-center relative h-56 '>
+      <div className='hero-sec bg-cover bg-center relative h-56 z-10'>
         <div className='absolute bottom-9p left-1/2  w-full  transform -translate-x-1/2 px-10'>
           <div className='text-center px-5 max-w-[574px] mx-auto rounded-lg bg-white mainBoxShadow justify-center h-[108px] flex flex-col'>
 
             <div className="flex  justify-between mb-3 max-w-[322px] mx-auto text-[13px] flex-wrap w-full">
+              <div className="dropdown dropdown-bottom dropdown-end">
+                <button
+                  tabIndex={0} className='bg-primary text-white font-semibold border-0 px-1  min-w-[123px] max-w-[123px] h-[33px] rounded-xl outline-none flex justify-between items-center gap-1 overflow-hidden'>
 
-              <select className='bg-primary text-white font-semibold border-0 px-1  min-w-[123px] h-[33px] rounded-xl outline-none'>
-                <option value="">Select Country</option>
-                <option value="Bangladesh">Bangladesh</option>
-                <option value="Afganistan">Afganistan</option>
-                <option value="Dubai">Dubai</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="Turkey">Turkey</option>
-                <option value="Franch">Franch</option>
-              </select>
+                  <p className=" text-nowrap max-w-[85%] overflow-hidden">{selectedCountry}</p> <p className=""><FaAngleDown /></p>
+
+
+                </button>
+
+                <ul tabIndex={0} className="dropdown-content bg-base-100 rounded-box z-10 relative w-52 p-2 shadow max-h-[450px] overflow-y-auto">
+                  <div onClick={() => setSelectedCountry('Select Country')} value="" className="cursor-pointer p-1 bg-white border-b border-gray-400 flex items-center gap-2">
+                    <div className="w-8 h-5"></div>
+                    <p>Select Country</p>
+                  </div>
+                  {
+                    allCountry?.map((item, idx) => <div key={idx} onClick={() => setSelectedCountry(item.name.common)} value={item.name.common} className={`cursor-pointer p-1 border-b border-gray-400 flex items-center gap-2 ${selectedCountry===item.name.common ? 'bg-gray-200' : 'bg-white'}`}>
+                      <img src={item.flags.png} className="w-8 h-5" alt="" />
+                      <p className="text-start">{item.name.common}</p>
+                    </div>)
+                  }
+                </ul>
+              </div>
+
 
               <select className=' bg-primary rounded-xl text-white font-semibold border-0 px-1 min-w-[111px] h-[33px]'>
                 <option value="">Type of work</option>
