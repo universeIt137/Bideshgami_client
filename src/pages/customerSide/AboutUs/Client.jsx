@@ -3,17 +3,14 @@ import React from 'react';
 const Client = () => {
     return (
         <>
-            <div className='pt-10 lg:pt-32 w-2/4 mx-auto'>
-                <p className='text-3xl lg:text-5xl text-center font-bold text-[#0066ff]'>OUR STAFF</p>
-                <div className="divider"></div>
-            </div>
+            <p className='text-3xl lg:text-[40px] text-center font-bold text-[#0066ff] border-b-2 border-black w-max mx-auto pb-2 px-2 mb-10'>OUR STAFF</p>
 
             <section>
                 <div className="bg-[#80b3ff] p-5">
-                    <div className="lg:flex justify-around p-10 mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-5">
                         <div className=" text-white text-center">
                             <div className="avatar">
-                                <div className="rounded-full ring w-32 md:w-60">
+                                <div className="rounded-full ring w-32 lg:w-60">
                                     <img src="https://www.corporatephotographerslondon.com/wp-content/uploads/2023/02/LinkedIn_Profile_Photo.jpg" />
                                 </div>
                             </div>

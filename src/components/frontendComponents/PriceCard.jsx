@@ -16,7 +16,7 @@ const PriceCard = ({ data }) => {
             <img
               src={data?.image || ''}
               alt="Shoes"
-              className="rounded-xl w-full min-h-[162px]  h-[162px] object-cover" />
+              className="rounded-t-xl w-full min-h-[162px]  h-[162px] object-cover" />
           </figure>
           <div className="w-11/12 mx-auto mt-1 h-full flex flex-col justify-between">
             <div>
@@ -24,7 +24,7 @@ const PriceCard = ({ data }) => {
                 <div>
                   <h2 className="text-lg font-medium leading-5">{data?.title || ''}</h2>
                 </div>
-                <div><CiHeart className='text-lg text-primary' /></div>
+                <div><CiHeart className='text-2xl text-primary' /></div>
               </div>
               <p className='text-xl font-bold text-[#0066FF] mt-3'>{data?.price || ''}</p>
   
