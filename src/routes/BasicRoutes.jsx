@@ -26,6 +26,7 @@ import ChangePass from '../pages/UserDashboard/ChangePass/ChangePass';
 import CheckApplication from '../pages/UserDashboard/CheckApplication/CheckApplication';
 import Message from '../pages/UserDashboard/CheckApplication/Message/Message';
 import MyBooking from '../pages/UserDashboard/MyBooking/MyBooking';
+import HajjUmrah from '../pages/customerSide/hajjUmrah/HajjUmrah';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -97,10 +98,17 @@ const BasicRoutes = createBrowserRouter([
                 path: "/safety-tips",
                 element: <SafetyTips></SafetyTips>
             },
+            // air ticket related routes 
             {
                 path: "/air-ticket",
                 element: <AirTicket></AirTicket>
             },
+            // Hajj umrah related routes 
+            {
+                path: "/hajj-umrah",
+                element: <HajjUmrah></HajjUmrah>
+            },
+
             {
                 path: "/user-dashboard",
                 element: <UserDashBoardLayout />,

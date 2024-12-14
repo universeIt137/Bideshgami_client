@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <>
-            <footer className="bg-blue-600 text-white lg:px-10">
+            <footer className="bg-[#0066ff] text-white lg:px-10">
                 <div className='flex flex-col lg:flex-row justify-between w-1/2  lg:w-10/12 mx-auto items-center  py-10 text-center lg:text-start'>
 
                     <div className=' flex flex-col basis-1/4 space-y-2'>
@@ -17,12 +17,7 @@ const Footer = () => {
                         <p>Career</p>
                         <Link to={"/term-condition"}><p>Terms & conditions</p></Link>
                         <Link to={"/refund-policy"}><p>Refund Policy</p></Link>
-                        <Link to={"/qr-page"}><p>QR Page</p></Link>
-                        <Link to={"/privacy"}><p>Privacy Policy</p></Link>
-                        <Link to={"/apply-form"}><p>Apply Form</p></Link>
-                        <Link to={"/service-details"}><p>Service Page</p></Link>
-                        <Link to={"/user-dashboard"}><p>User Dashboard</p></Link>
-
+                        
                     </div>
 
                     <div className='mt-12 lg:mt-0 flex flex-col basis-1/4 space-y-2 '>
@@ -79,16 +74,16 @@ const Footer = () => {
 
                 <hr />
 
-                <div className="bg-blue-600  w-3/4 mx-auto">
+                <div className=" w-10/12 mx-auto">
                     <div className="container mx-auto py-4 flex flex-wrap flex-col items-center sm:flex-row">
                         
                         <div>
-                            <img className='w-24' src="https://res.cloudinary.com/deifi77os/image/upload/v1722700494/Bideshgami/kbcp5nbx2ssawy4hwd1f.png" alt="" />
+                            <img className='w-36' src="https://res.cloudinary.com/deifi77os/image/upload/v1722700494/Bideshgami/kbcp5nbx2ssawy4hwd1f.png" alt="" />
                         </div>
 
 
                         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center  items-center sm:justify-start">
-                            <p className="text-white  text-center sm:text-left">© Copyright Bideshgami.
+                            <p className="text-white text-xl  text-center sm:text-left">© Copyright Bideshgami.
                             </p>
                         </span>
                     </div>
