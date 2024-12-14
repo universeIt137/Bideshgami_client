@@ -10,7 +10,7 @@ const HajjSingleCard = ({ data }) => {
 
     return (
         <>
-            <Link to={'/service-details'}>
+            <Link to={'/hajj-umrah/details'}>
                 <div className="card bg-base-100 shadow-lg">
                     <figure className="">
                         <img
