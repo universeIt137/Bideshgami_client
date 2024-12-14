@@ -11,7 +11,7 @@ const AddCard = () => {
 
                 {/* informations */}
                 <div className="  w-full">
-                    <div className=" p-2 px-5">
+                    <div className="p-2 px-5">
                         <p className='lg:text-base font-bold'>Italy Work Permit</p>
 
                         <div className="flex items-center gap-2">
@@ -25,7 +25,7 @@ const AddCard = () => {
                         </div>
                         <p className='lg:text-xs text-[10px] text-gray-500'>Bideshgami Work Permit Visa</p>
                         <p className='text-sm text-primary font-extrabold'>15,000 BDT</p>
-                        <p className="text-end text-xl text-gray-600 font-light">4 days</p>
+                        <p className="text-end lg:text-xl text-gray-600 font-light">4 days</p>
                     </div>
                 </div>
             </div>

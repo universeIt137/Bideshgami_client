@@ -27,6 +27,7 @@ import CheckApplication from '../pages/UserDashboard/CheckApplication/CheckAppli
 import Message from '../pages/UserDashboard/CheckApplication/Message/Message';
 import MyBooking from '../pages/UserDashboard/MyBooking/MyBooking';
 import HajjUmrah from '../pages/customerSide/hajjUmrah/HajjUmrah';
+import HajjUmrahDetails from '../pages/customerSide/hajjUmrah/HajjUmrahDetails';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -107,6 +108,10 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: "/hajj-umrah",
                 element: <HajjUmrah></HajjUmrah>
+            },
+            {
+                path: "/hajj-umrah/details",
+                element: <HajjUmrahDetails></HajjUmrahDetails>
             },
 
             {
