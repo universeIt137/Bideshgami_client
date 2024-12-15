@@ -94,8 +94,10 @@ const WorkPermitDetails = () => {
                                 </div>
 
                                 <div className="grid grid-cols-2 max-w-[450px] mx-auto gap-5 mt-10">
-                                    <Link to={'/apply-form'}><button className="w-full  h-8 rounded-lg text-white bg-primary font-semibold">Apply Now</button></Link>
                                     <button onClick={handleChatClick} className="flex w-full h-8 rounded-lg text-white bg-primary font-semibold items-center justify-center gap-2"><HiOutlineChat className="text-lg" /> Chat</button>
+
+                                    <Link to={'/apply-form'}><button className="w-full  h-8 rounded-lg text-white bg-primary font-semibold">Apply Now</button></Link>
+
                                 </div>
                                 <div className="mt-10 space-y-2">
                                     <h2 className="text-2xl sm:text-4xl font-bold">Work Permit Visa in Romania</h2>
@@ -167,7 +169,7 @@ const WorkPermitDetails = () => {
                                     </div>
                                     <button
                                         className="text-gray-500 hover:text-gray-700"
-                                        onClick={()=>handleCloseModal()}
+                                        onClick={() => handleCloseModal()}
                                     >
                                         &#x2715;
                                     </button>
