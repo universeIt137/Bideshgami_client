@@ -85,10 +85,10 @@ const HajjCards = () => {
             posted: "12 Days Ago",
             image: "https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734165076/Bideshgami/Public/xx1p0onkchjnzeyc6mu4.png",
         },
-       
-        
+
+
     ];
-    
+
 
     return (
         <Container>
@@ -96,7 +96,7 @@ const HajjCards = () => {
                 <div>
                     <div className='container mx-auto'>
                         {/* // other work */}
-                        
+
                         <div className="grid lg:grid-cols-3 gap-8">
                             {
                                 cardsData?.map((item, idx) => <HajjSingleCard key={idx} data={item}></HajjSingleCard>)
@@ -104,7 +104,7 @@ const HajjCards = () => {
 
 
                         </div>
-                        
+
                     </div>
 
 
