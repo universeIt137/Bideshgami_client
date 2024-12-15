@@ -29,6 +29,7 @@ import HajjUmrah from '../pages/customerSide/hajjUmrah/HajjUmrah';
 import HajjUmrahDetails from '../pages/customerSide/hajjUmrah/HajjUmrahDetails';
 import WorkPermitDetails from '../pages/customerSide/WorkPermit/WorkPermitDetails';
 import WorkPermit from '../pages/customerSide/WorkPermit/WorkPermit';
+import ApplyForm2 from '../pages/customerSide/applyForm/ApplyForm2';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -72,7 +73,7 @@ const BasicRoutes = createBrowserRouter([
             },
             {
                 path: "/apply-form",
-                element: <ApplyForm></ApplyForm>
+                element: <ApplyForm2></ApplyForm2>
             },
             {
                 path: "/service-details",
