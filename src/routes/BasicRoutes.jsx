@@ -17,7 +17,6 @@ import RefundPolicy from '../pages/customerSide/refundPolicy/RefundPolicy';
 import TermCondition from '../pages/customerSide/termCondition/TermCondition';
 import SafetyTips from '../pages/customerSide/safetyTips/SafetyTips';
 import AirTicket from '../pages/customerSide/airTicket/AirTicket';
-import WorkPermit from '../pages/customerSide/WorkPermit/WorkPermit';
 import UserProfile from '../pages/UserDashboard/UserProfile/UserProfile';
 import UserDashBoardLayout from '../pages/UserDashboard/UserDashBoardLayout/UserDashBoardLayout';
 import UserDashboard from '../pages/UserDashboard/UserDashboard/UserDashboard';
@@ -28,6 +27,8 @@ import Message from '../pages/UserDashboard/CheckApplication/Message/Message';
 import MyBooking from '../pages/UserDashboard/MyBooking/MyBooking';
 import HajjUmrah from '../pages/customerSide/hajjUmrah/HajjUmrah';
 import HajjUmrahDetails from '../pages/customerSide/hajjUmrah/HajjUmrahDetails';
+import WorkPermitDetails from '../pages/customerSide/WorkPermit/WorkPermitDetails';
+import WorkPermit from '../pages/customerSide/WorkPermit/WorkPermit';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -38,10 +39,7 @@ const BasicRoutes = createBrowserRouter([
                 path: "/",
                 element: <Homepage></Homepage>
             },
-            {
-                path: "/visaDetails",
-                element: <VisaDetails />
-            },
+            
             {
                 path: '/login',
                 element: <LoginPage></LoginPage>
@@ -67,10 +65,7 @@ const BasicRoutes = createBrowserRouter([
                 element: <AboutUs />
             },
 
-            {
-                path: '/work-permit',
-                element: <WorkPermit />
-            },
+           
             {
                 path: "/privacy",
                 element: <PrivacyPage></PrivacyPage>
@@ -99,6 +94,18 @@ const BasicRoutes = createBrowserRouter([
                 path: "/safety-tips",
                 element: <SafetyTips></SafetyTips>
             },
+
+            // work permit related routes 
+            {
+                path: '/work-permit',
+                element: <WorkPermit></WorkPermit>
+             },
+
+             {
+                path: '/work-permit-details',
+                element: <WorkPermitDetails />
+            },
+
             // air ticket related routes 
             {
                 path: "/air-ticket",

@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeroSection from '../../../components/frontendComponents/Home/HeroSection';
 import HajjHero from './components/HajjHero';
 import HajjCards from './components/HajjCards';
+import Pagination from '../../../shared/Pagination';
 
 const HajjUmrah = () => {
+
+     const [currentPage, setCurrentPage] = useState(1);
+        const totalPages = 5; // Adjust this value according to your data
+    
+        const handlePageChange = (page) => {
+            if (page < 1 || page > totalPages) return;
+            setCurrentPage(page);
+        };
+
     return (
         <div className='mb-10'>
             <div className="">
@@ -21,6 +31,13 @@ const HajjUmrah = () => {
             </div>
             <div className="">
                 <HajjCards></HajjCards>
+            </div>
+            <div className="flex justify-end my-5 w-10/12 mx-auto">
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={handlePageChange}
+                />
             </div>
         </div>
     );

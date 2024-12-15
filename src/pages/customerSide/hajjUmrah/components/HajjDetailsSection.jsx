@@ -3,6 +3,78 @@ import { FaChevronDown, FaHeart, FaRegHeart } from 'react-icons/fa';
 import { IoChatbubbleEllipsesSharp, IoShareSocialOutline } from 'react-icons/io5';
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
+
+const ChatModal = ({ isOpen, onClose }) => {
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white w-full lg:w-1/3 rounded-lg shadow-lg">
+                {/* Header */}
+                <div className="flex items-center justify-between border-b p-4">
+                    <h2 className="text-lg font-semibold text-gray-700">
+                        Chat With Hajj Pre Registration 2025 <span className="text-primary">(HU:010120)</span>
+                    </h2>
+                    <button
+                        className="text-gray-400 hover:text-gray-700"
+                        onClick={onClose}
+                    >
+                        &times;
+                    </button>
+                </div>
+
+                {/* Package Info */}
+                <div className="flex items-center p-4 border-b">
+                    <img
+                        src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734179243/Bideshgami/Public/zqxasvaac58ojnnclsw8.png"
+                        alt="Package"
+                        className="w-20 h-20 rounded-lg object-cover"
+                    />
+                    <div className="ml-4">
+                        <h3 className="font-medium text-gray-800">40 Days Shifting Hajj Package 2024</h3>
+                        <p className="text-sm text-gray-600">Starts from BDT. 63,500 / per person</p>
+                        <p className="text-xs text-gray-500">4 days</p>
+                    </div>
+                </div>
+
+                {/* Safety Tips */}
+                <div className="p-4 bg-blue-100 border-l-4 border-blue-500">
+                    <h4 className="text-blue-700 font-medium mb-1">Be careful: avoid online scams</h4>
+                    <p className="text-xs text-gray-600">
+                        Never share bank card details or OTP, always check the product before payment. Bideshgami
+                        does not provide delivery services. Always be alert.
+                    </p>
+                    <a href="#" className="text-blue-600 text-sm underline mt-2 block">See all safety tips</a>
+                </div>
+
+                {/* Chat Section */}
+                <div className="flex flex-col p-4 h-60 overflow-y-auto bg-gray-50">
+                    <p className="text-gray-400 text-center">Start chatting...</p>
+                </div>
+
+                {/* Input Section */}
+                <div className="flex items-center border-t p-4">
+                    <input
+                        type="text"
+                        placeholder="Type..."
+                        className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                    <button className="ml-2 text-gray-500 hover:text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15 12H3v-2h12V5l7 7-7 7v-5z" />
+                        </svg>
+                    </button>
+                    <button className="ml-2 text-gray-500 hover:text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4 4h16v16H4z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const Alldata = [
     {
@@ -99,18 +171,47 @@ const Alldata = [
 
 const description = `
     However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded.
-    Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded.
-    Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways toHowever, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to
+    Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to changing job descriptions Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Later this year, developers will be required to include information in a so-called “nutrition label” about how their apps collect data on their app description page.Baby page.Baby cigarette “No worry of cancer with this cigarette costume,” the description for this gem reads.However, as the workaround description implies, this separate tracking carries the risk of someone still being served the same ad even after the limit has been exceeded. Nurses found that working safely isn’t only about PPE and sanitation, but also a much broader range of practices, from using technology in new ways to
 `
 
 
+
+
+
+
+
 const HajjDetailsSection = () => {
+
+    let subtitle;
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        subtitle.style.color = '#f00';
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+
     const [show, setShow] = useState(false);
     const [favourite, setFavourite] = useState(false);
     console.log(favourite);
     const trimmedText = description?.slice(0, 300);
+
+    const [isChatOpen, setIsChatOpen] = useState(false);
+
     return (
         <>
+           
+           
+
+
             <div className="border p-2 container mx-auto lg:my-10">
 
                 <seciton className="header-info">
@@ -335,7 +436,8 @@ const HajjDetailsSection = () => {
 
                                 <div className="space-y-2 mb-5">
                                     <button className='bg-primary w-full text-white btn text-xl'>Booking Now</button>
-                                    <button className='bg-primary w-full text-white btn text-xl'> <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734172251/Bideshgami/Public/og4zjjgeggerrzk1zhei.png" alt="" /> Chat </button>
+                                    <button onClick={() => setIsChatOpen(true)} className='bg-primary w-full text-white btn text-xl'> <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734172251/Bideshgami/Public/og4zjjgeggerrzk1zhei.png" alt="" /> Chat </button>
+                                    <ChatModal isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
                                 </div>
 
 
