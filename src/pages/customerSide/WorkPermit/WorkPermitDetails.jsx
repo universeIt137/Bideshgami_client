@@ -10,7 +10,18 @@ import { useState } from "react";
 import AddSection from "../servicePage/AddSection";
 import { Link } from "react-router-dom";
 const WorkPermitDetails = () => {
-    const [seeMore, setSeeMore] = useState(false)
+    const [seeMore, setSeeMore] = useState(false);
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleChatClick = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
     const workPermitDetails = [
         { label: "Country Name", value: "Romania" },
         { label: "Type of Visa", value: "Work Permit" },
@@ -84,7 +95,7 @@ const WorkPermitDetails = () => {
 
                                 <div className="grid grid-cols-2 max-w-[450px] mx-auto gap-5 mt-10">
                                     <Link to={'/apply-form'}><button className="w-full  h-8 rounded-lg text-white bg-primary font-semibold">Apply Now</button></Link>
-                                    <button className="flex w-full h-8 rounded-lg text-white bg-primary font-semibold items-center justify-center gap-2"><HiOutlineChat className="text-lg" /> Chat</button>
+                                    <button onClick={handleChatClick} className="flex w-full h-8 rounded-lg text-white bg-primary font-semibold items-center justify-center gap-2"><HiOutlineChat className="text-lg" /> Chat</button>
                                 </div>
                                 <div className="mt-10 space-y-2">
                                     <h2 className="text-2xl sm:text-4xl font-bold">Work Permit Visa in Romania</h2>
@@ -131,7 +142,7 @@ const WorkPermitDetails = () => {
                         </div>
                     </div>
                     <div className="hidden lg:block">
-                    <AddSection></AddSection>
+                        <AddSection></AddSection>
                     </div>
 
                     {/* Footer image section  */}
@@ -139,6 +150,77 @@ const WorkPermitDetails = () => {
                         <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734259022/Bideshgami/Public/fwadzkx9jwfygejregry.png" className="w-full" alt="" />
                     </div>
                 </div>
+
+                {/* Modal */}
+                {isModalOpen && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                            <div className="bg-white rounded-lg shadow-lg w-[500px]">
+                                {/* Header */}
+                                <div className="flex justify-between items-center p-4 border-b">
+                                    <div>
+                                        <h2 className="text-lg font-semibold">
+                                            Chat With Malaysia Work Permit Visa
+                                            <span className="text-blue-600 ml-2">(MWPV:010120)</span>
+                                        </h2>
+                                        <p className="text-gray-500 text-sm">20 Day Ago</p>
+                                    </div>
+                                    <button
+                                        className="text-gray-500 hover:text-gray-700"
+                                        onClick={()=>handleCloseModal()}
+                                    >
+                                        &#x2715;
+                                    </button>
+                                </div>
+
+                                {/* Content */}
+                                <div className="p-4">
+                                    <div className="flex items-center gap-4">
+                                        <img
+                                            src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734179243/Bideshgami/Public/zqxasvaac58ojnnclsw8.png"
+                                            alt="Malaysia Work Permit"
+                                            className="w-20 h-20 object-cover rounded"
+                                        />
+                                        <div>
+                                            <h3 className="text-lg font-semibold">Malaysia Work Permit</h3>
+                                            <p className="text-blue-600 text-sm">Starting from...</p>
+                                            <p className="text-green-600 text-lg font-bold">15,000 BDT</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Warning Box */}
+                                    <div className="mt-4 p-4 border rounded-lg bg-gray-100">
+                                        <h4 className="text-blue-600 font-medium">Be careful: avoid online scams</h4>
+                                        <ul className="text-sm text-gray-600 mt-2 list-disc pl-5">
+                                            <li>Never share bank card details or OTP, always product before payment.</li>
+                                            <li>
+                                                Check it out. <strong>Bideshgami</strong> does not provide delivery service.
+                                            </li>
+                                            <li>Always be alert.</li>
+                                        </ul>
+                                    </div>
+
+                                    {/* Chat Box */}
+                                    <div className="mt-4 bg-gray-50 border rounded-lg h-40 flex flex-col">
+                                        <p className="text-gray-400 text-sm text-center mt-6">Start chatting............</p>
+                                    </div>
+
+                                    {/* Input Box */}
+                                    <div className="flex items-center border-t mt-4">
+                                        <input
+                                            type="text"
+                                            placeholder="Type"
+                                            className="w-full p-3 text-gray-700 border-0 focus:outline-none"
+                                        />
+                                        <button className="p-3 text-white bg-blue-600 rounded-r-lg hover:bg-blue-700">
+                                            &#9658;
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </Container>
 
         </>
