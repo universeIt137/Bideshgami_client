@@ -4,6 +4,7 @@ import { airports } from '../../../../airportArray';
 import GlobalBanner from '../../../../shared/GlobalBanner';
 import Destination from '../../airTicket/Destination';
 import DestinationComponent from './DestinationComponent';
+import { Link } from 'react-router-dom';
 
 const TourBanner = () => {
     const [tripType, setTripType] = useState('oneWay'); // State for radio selection
@@ -100,7 +101,7 @@ const TourBanner = () => {
 
                 <div className='p-5 lg:w-11/12 mx-auto rounded-lg bg-white mainBoxShadow relative'>
 
-                   
+
 
                     {/* Select destination section  */}
                     <DestinationComponent travelers={travelers} setTravelers={setTravelers} tripType={tripType} setTripType={setTripType} trip1={trip1} setTrip1={setTrip1} bookingClassType={bookingClassType} setBookingClassType={setBookingClassType} />
@@ -119,10 +120,10 @@ const TourBanner = () => {
 
 
                     <div className="py-3 lg:flex items-center gap-4  justify-between ">
-                       
+
 
                         <div className="lg:flex gap-3 mt-5 items-center">
-                        <p className="font-bold">Tour Type:</p>
+                            <p className="font-bold">Tour Type:</p>
                             <div className="flex gap-2 flex-wrap">
                                 {
                                     fareType.map((item, idx) => <button key={idx}
@@ -147,12 +148,16 @@ const TourBanner = () => {
                                 <button className='  text-base text-white px-8 text-center font-normal rounded-md '>
                                     <div className="flex items-center gap-3">
                                         <div className="">
-                                        <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734430713/Bideshgami/Public/ds0ix4d39syxssjbov4d.png" alt="" />
+                                            <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734430713/Bideshgami/Public/ds0ix4d39syxssjbov4d.png" alt="" />
                                         </div>
                                         <p className='text-primary font-bold'>Add Another City</p>
                                     </div>
                                 </button>
-                                <button className='btn bg-primary text-base text-white px-8 text-center font-normal rounded-md hover:bg-primary'>Customize Tour</button>
+                                <button className='btn bg-primary text-base text-white px-8 text-center font-normal rounded-md hover:bg-primary'>
+                                    <Link to={'/customized-tour'}>
+                                        Customize Tour
+                                    </Link>
+                                </button>
                             </div>
                         </div>
                     </div>
