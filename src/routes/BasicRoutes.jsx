@@ -30,6 +30,10 @@ import HajjUmrahDetails from '../pages/customerSide/hajjUmrah/HajjUmrahDetails';
 import WorkPermitDetails from '../pages/customerSide/WorkPermit/WorkPermitDetails';
 import WorkPermit from '../pages/customerSide/WorkPermit/WorkPermit';
 import ApplyForm2 from '../pages/customerSide/applyForm/ApplyForm2';
+import VideosSection from '../pages/customerSide/videosPage/VideosSection';
+import VideoDetails from '../pages/customerSide/videosPage/VideoDetails';
+import TourPackages from '../pages/customerSide/tourPackageRelatedPages/TourPackages';
+import TourPackageDetails from '../pages/customerSide/tourPackageRelatedPages/packageDetails/TourPackageDetails';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -152,6 +156,26 @@ const BasicRoutes = createBrowserRouter([
                     },
                 ]
             },
+
+            // videos related routes 
+            {
+                path: "/videos",
+                element: <VideosSection></VideosSection>
+            },
+            {
+                path: "/video-details",
+                element: <VideoDetails></VideoDetails>
+            },
+
+            // tour package related routes 
+            {
+                path: "/tour-packages",
+                element: <TourPackages></TourPackages>
+            },
+            {
+                path: "/tour-packages-details",
+                element: <TourPackageDetails></TourPackageDetails>
+            }
 
         ]
     },

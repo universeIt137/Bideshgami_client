@@ -9,7 +9,7 @@ import { HiOutlineChat } from "react-icons/hi";
 import { useState } from "react";
 import AddSection from "../servicePage/AddSection";
 import { Link } from "react-router-dom";
-const WorkPermitDetails = () => {
+const VideoDetails = () => {
     const [seeMore, setSeeMore] = useState(false);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -58,11 +58,25 @@ const WorkPermitDetails = () => {
                                     <p className="text-sm sm:text-base">Posted on 01 Jul 12:19 pm</p>
                                     <p className="text-xs text-primary">POST ID: (MWPV:010120)</p>
                                 </div>
-                                <div className="">
-                                    <img className="lg:h-[550px]" src={image} alt="" />
+                                <div className="lg:pb-20">
+                                    {/* <img className="lg:h-[550px]" src={image} alt="" /> */}
+
+                                    <div className="relative">
+                                        <img
+                                            src={image}
+
+                                            className="w-full lg:h-[350px] object-cover rounded-2xl"
+                                        />
+                                        {/* Play Button */}
+                                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 rounded-2xl">
+                                            <button className=" text-white p-3 rounded-full">
+                                                <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734424762/Bideshgami/Public/r7mpjyouem6cl6lkjw1f.png" alt="" />
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="p-3 px-5 lg:px-10 rounded-lg border-2 border-primary py-10">
-                                    <div className="flex flex-col justify-center items-center gap-3 px-2 lg:px-5">
+                                <div className="p-3 px-5  lg:px-10 rounded-lg border-2 border-primary py-10">
+                                    <div className="flex  flex-col justify-center items-center gap-3 px-2 lg:px-5">
                                         <img className="w-16" src={warning} alt="" />
                                         <h4 className="text-lg font-medium">Stay Alert: Avoid Online Scams</h4>
                                         <p className="text-xs text-gray-600">Never share card details or OTPs, and always verify items in person before
@@ -87,7 +101,7 @@ const WorkPermitDetails = () => {
                                     </div>
 
                                     <div className="flex items-center gap-1 bg-[#edf0f8] w-max px-2  py-1 rounded-md">
-                                        
+
                                         <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734257361/Bideshgami/Public/qpcc1vcwkacldcimlksf.png" alt="" />
                                     </div>
 
@@ -230,4 +244,4 @@ const WorkPermitDetails = () => {
     );
 };
 
-export default WorkPermitDetails;
+export default VideoDetails;
