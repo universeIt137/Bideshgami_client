@@ -39,7 +39,7 @@ const Navbar = () => {
       </li>
       <li  >
         {" "}
-        <NavLink to={"/tour-package"}>Tour Package</NavLink>{" "}
+        <NavLink to={"/tour-packages"}>Tour Package</NavLink>{" "}
       </li>
       <li  >
         {" "}
