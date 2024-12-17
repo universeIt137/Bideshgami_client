@@ -30,6 +30,8 @@ import HajjUmrahDetails from '../pages/customerSide/hajjUmrah/HajjUmrahDetails';
 import WorkPermitDetails from '../pages/customerSide/WorkPermit/WorkPermitDetails';
 import WorkPermit from '../pages/customerSide/WorkPermit/WorkPermit';
 import ApplyForm2 from '../pages/customerSide/applyForm/ApplyForm2';
+import VideosSection from '../pages/customerSide/videosPage/VideosSection';
+import VideoDetails from '../pages/customerSide/videosPage/VideoDetails';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -152,6 +154,16 @@ const BasicRoutes = createBrowserRouter([
                     },
                 ]
             },
+
+            // videos related routes 
+            {
+                path: "/videos",
+                element: <VideosSection></VideosSection>
+            },
+            {
+                path: "/video-details",
+                element: <VideoDetails></VideoDetails>
+            }
 
         ]
     },

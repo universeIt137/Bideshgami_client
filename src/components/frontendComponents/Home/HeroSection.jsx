@@ -16,12 +16,15 @@ const HeroSection = () => {
     {
       id: 1,
       img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099528/airoplane_et3w27.png',
-      title: 'Air-Ticket'
+      title: 'Air-Ticket',
+      url: '/air-ticket'
+      
     },
     {
       id: 2,
       img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099526/workpermit_ltyza3.png',
-      title: 'Work Permit'
+      title: 'Work Permit',
+      url: '/work-permit'
     },
     {
       id: 1,
@@ -31,7 +34,8 @@ const HeroSection = () => {
     {
       id: 1,
       img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099534/kaaba_pdvqkk.png',
-      title: 'Hajj Umrah'
+      title: 'Hajj Umrah',
+      url: '/hajj-umrah'
     },
     {
       id: 1,
@@ -51,7 +55,8 @@ const HeroSection = () => {
     {
       id: 1,
       img: 'https://res.cloudinary.com/dnvmj9pvk/image/upload/v1723099520/play-button_wt1rkb.png',
-      title: 'Video'
+      title: 'Video',
+      url: '/videos'
     },
     {
       id: 1,
@@ -141,7 +146,7 @@ const HeroSection = () => {
           <div className='flex justify-center gap-5 flex-wrap' >
             {
               dataIcon.map((item, idx) => (
-                <Link key={idx} className="flex flex-col items-center justify-center text-center">
+                <Link to={item?.url} key={idx} className="flex flex-col items-center justify-center text-center">
                   <div className="bg-primary transition-all rounded-full size-[51px] flex items-center justify-center">
                     <img src={item.img} className='size-8' alt={item.title} />
                   </div>
