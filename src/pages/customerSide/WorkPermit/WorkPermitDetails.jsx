@@ -78,15 +78,16 @@ const WorkPermitDetails = () => {
                             <div className="py-7 px-2 sm:px-5">
                                 <div className=" flex  justify-end lg:mr-16 items-center gap-5 text-sm sm:text-base">
                                     <div className="flex justify-between items-center gap-1 bg-primary/10  px-2 rounded h-[30px]">
-                                        <TbEyeFilled className="text-primary text-lg" />
+                                        <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734422698/Bideshgami/Public/dugzn76t39ormvj4feef.png" alt="" />
                                         <p className=" ">205 Total Apply</p>
                                     </div>
 
-                                    <div className="flex items-center gap-1 bg-[#FFF0F0] w-max px-2  py-1 rounded-md">
+                                    <div className="flex items-center gap-1 bg-[#edf0f8] w-max px-2  py-1 rounded-md">
                                         <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734256715/Bideshgami/Public/mg5vzqsnhx71sh5rg8ts.png" alt="" />
                                     </div>
 
-                                    <div className="flex items-center gap-1 bg-[#FFF0F0] w-max px-2  py-1 rounded-md">
+                                    <div className="flex items-center gap-1 bg-[#edf0f8] w-max px-2  py-1 rounded-md">
+                                        
                                         <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734257361/Bideshgami/Public/qpcc1vcwkacldcimlksf.png" alt="" />
                                     </div>
 
@@ -157,7 +158,7 @@ const WorkPermitDetails = () => {
                 {isModalOpen && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
                         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                            <div className="bg-white rounded-lg shadow-lg w-[500px]">
+                            <div className="bg-white rounded-lg shadow-lg w-[800px]">
                                 {/* Header */}
                                 <div className="flex justify-between items-center p-4 border-b">
                                     <div>
