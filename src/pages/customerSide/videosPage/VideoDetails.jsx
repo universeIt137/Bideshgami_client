@@ -49,7 +49,7 @@ const VideoDetails = () => {
             <Container>
                 <div className="py-5 space-y-5">
                     <GlobalBanner img={BannerImg} />
-                    <div className="border-2 border-gray-400">
+                    <div className="border rounded-lg shadow-lg">
                         <div className="sm:p-3  w-full grid grid-cols-1 md:grid-cols-2">
                             {/* Left Side  */}
                             <div className="space-y-5 p-5">
@@ -108,11 +108,15 @@ const VideoDetails = () => {
 
                                 </div>
 
-                                <div className="grid grid-cols-2 max-w-[450px] mx-auto gap-5 mt-10">
-                                    <button onClick={handleChatClick} className="flex w-full h-8 rounded-lg text-white bg-primary font-semibold items-center justify-center gap-2"><HiOutlineChat className="text-lg" /> Chat</button>
+                                <div className="grid grid-cols-2 max-w-[450px] mx-auto gap-5 py-4 mt-10">
+                                    <button onClick={handleChatClick} className="flex w-full h-8 rounded-lg text-white bg-primary font-semibold items-center justify-center gap-2  py-6"><HiOutlineChat className="text-lg" /> Chat</button>
 
-                                    <Link to={'/apply-form'}><button className="w-full  h-8 rounded-lg text-white bg-primary font-semibold">Apply Now</button></Link>
+                                    <button className="w-full   rounded-lg text-white bg-primary font-semibold  ">
+                                        <Link to={'/apply-form'} className="">
+                                        Apply Now
+                                        </Link>
 
+                                       </button>
                                 </div>
                                 <div className="mt-10 space-y-2">
                                     <h2 className="text-2xl sm:text-4xl font-bold">Work Permit Visa in Romania</h2>
