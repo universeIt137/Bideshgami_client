@@ -35,6 +35,9 @@ import VideoDetails from '../pages/customerSide/videosPage/VideoDetails';
 import TourPackages from '../pages/customerSide/tourPackageRelatedPages/TourPackages';
 import TourPackageDetails from '../pages/customerSide/tourPackageRelatedPages/packageDetails/TourPackageDetails';
 import CustomizedTour from '../pages/customerSide/tourPackageRelatedPages/customizeTour/CustomizedTour';
+import StudentPackage from '../pages/customerSide/studentPackage/StudentPackage';
+import StudentPackageDetails from '../pages/customerSide/studentPackage/studentPackageDetails/StudentPackageDetails';
+import AirTicketBookNow from '../pages/customerSide/airTicket/bookNowRelatedPages/AirTicketBookNow';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -117,6 +120,12 @@ const BasicRoutes = createBrowserRouter([
                 path: "/air-ticket",
                 element: <AirTicket></AirTicket>
             },
+
+            {
+                path: "/air-ticket/book-now",
+                element: <AirTicketBookNow></AirTicketBookNow>
+            },
+
             // Hajj umrah related routes 
             {
                 path: "/hajj-umrah",
@@ -180,6 +189,15 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: "/customized-tour",
                 element: <CustomizedTour></CustomizedTour>
+            },
+            // student package related routes 
+            {
+                path: "/student-package",
+                element: <StudentPackage></StudentPackage>
+            },
+            {
+                path: "/student-package-details",
+                element: <StudentPackageDetails></StudentPackageDetails>
             }
 
         ]
