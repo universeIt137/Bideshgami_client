@@ -37,6 +37,7 @@ import TourPackageDetails from '../pages/customerSide/tourPackageRelatedPages/pa
 import CustomizedTour from '../pages/customerSide/tourPackageRelatedPages/customizeTour/CustomizedTour';
 import StudentPackage from '../pages/customerSide/studentPackage/StudentPackage';
 import StudentPackageDetails from '../pages/customerSide/studentPackage/studentPackageDetails/StudentPackageDetails';
+import AirTicketBookNow from '../pages/customerSide/airTicket/bookNowRelatedPages/AirTicketBookNow';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -119,6 +120,12 @@ const BasicRoutes = createBrowserRouter([
                 path: "/air-ticket",
                 element: <AirTicket></AirTicket>
             },
+
+            {
+                path: "/air-ticket/book-now",
+                element: <AirTicketBookNow></AirTicketBookNow>
+            },
+
             // Hajj umrah related routes 
             {
                 path: "/hajj-umrah",
