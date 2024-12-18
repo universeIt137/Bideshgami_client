@@ -35,6 +35,8 @@ import VideoDetails from '../pages/customerSide/videosPage/VideoDetails';
 import TourPackages from '../pages/customerSide/tourPackageRelatedPages/TourPackages';
 import TourPackageDetails from '../pages/customerSide/tourPackageRelatedPages/packageDetails/TourPackageDetails';
 import CustomizedTour from '../pages/customerSide/tourPackageRelatedPages/customizeTour/CustomizedTour';
+import StudentPackage from '../pages/customerSide/studentPackage/StudentPackage';
+import StudentPackageDetails from '../pages/customerSide/studentPackage/studentPackageDetails/StudentPackageDetails';
 
 const BasicRoutes = createBrowserRouter([
     {
@@ -180,6 +182,15 @@ const BasicRoutes = createBrowserRouter([
             {
                 path: "/customized-tour",
                 element: <CustomizedTour></CustomizedTour>
+            },
+            // student package related routes 
+            {
+                path: "/student-package",
+                element: <StudentPackage></StudentPackage>
+            },
+            {
+                path: "/student-package-details",
+                element: <StudentPackageDetails></StudentPackageDetails>
             }
 
         ]

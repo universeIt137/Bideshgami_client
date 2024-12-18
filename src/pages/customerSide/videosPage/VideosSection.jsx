@@ -182,7 +182,7 @@ const VideosSection = () => {
 
                     ))}
                 </div>
-                <div className="text-center mt-8">
+                <div className="text-center my-20">
                     <button onClick={() => handleCard()} className="bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-600">
                         See More
                     </button>
