@@ -1,15 +1,12 @@
-import GlobalBanner from "../../../shared/GlobalBanner";
-import BannerImg from '../../../assets/detailsPage/banner.jpeg'
-import Container from "../../../shared/Container";
-import image from '../../../assets/detailsPage/image1.jpeg'
-import warning from '../../../assets/detailsPage/scamImg.png'
 import { TbEyeFilled } from "react-icons/tb";
 import { FaChevronDown, FaRegHeart } from "react-icons/fa";
 import { HiOutlineChat } from "react-icons/hi";
 import { useState } from "react";
-import AddSection from "../servicePage/AddSection";
 import { Link } from "react-router-dom";
-const VideoDetails = () => {
+import GlobalBanner from '../../../../shared/GlobalBanner';
+import Container from '../../../../shared/Container';
+import AddSection from "../../servicePage/AddSection";
+const StudentPackageDetails = () => {
     const [seeMore, setSeeMore] = useState(false);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,6 +40,10 @@ const VideoDetails = () => {
         { label: "Application deadline", value: "Date" }
     ];
 
+    const BannerImg = "https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734497888/Bideshgami/Public/pf4chak8obhtvkpnuacs.png";
+    const image = "https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734498005/Bideshgami/Public/slr6u3g9t54qzx6n0yfb.png";
+    const warning = "https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734498055/Bideshgami/Public/fehopearthtforflxqtg.png"
+
     window.scrollTo(0, 0);
     return (
         <>
@@ -54,29 +55,15 @@ const VideoDetails = () => {
                             {/* Left Side  */}
                             <div className="space-y-5 p-5">
                                 <div>
-                                    <h2 className="text-xl sm:text-3xl font-semibold">Work Permit Visa in Romania</h2>
+                                    <h2 className="text-xl sm:text-3xl font-semibold">University of Sussex Visa in Romania</h2>
                                     <p className="text-sm sm:text-base">Posted on 01 Jul 12:19 pm</p>
                                     <p className="text-xs text-primary">POST ID: (MWPV:010120)</p>
                                 </div>
-                                <div className="lg:pb-20">
-                                    {/* <img className="lg:h-[550px]" src={image} alt="" /> */}
-
-                                    <div className="relative">
-                                        <img
-                                            src={image}
-
-                                            className="w-full lg:h-[350px] object-cover rounded-2xl"
-                                        />
-                                        {/* Play Button */}
-                                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 rounded-2xl">
-                                            <button className=" text-white p-3 rounded-full">
-                                                <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734424762/Bideshgami/Public/r7mpjyouem6cl6lkjw1f.png" alt="" />
-                                            </button>
-                                        </div>
-                                    </div>
+                                <div className="">
+                                    <img className="lg:h-[550px]" src={image} alt="" />
                                 </div>
-                                <div className="p-3 px-5  lg:px-10 rounded-lg border-2 border-primary py-10">
-                                    <div className="flex  flex-col justify-center items-center gap-3 px-2 lg:px-5">
+                                <div className="p-3 px-5 lg:px-10 rounded-lg border-2 border-primary py-10">
+                                    <div className="flex flex-col justify-center items-center gap-3 px-2 lg:px-5">
                                         <img className="w-16" src={warning} alt="" />
                                         <h4 className="text-lg font-medium">Stay Alert: Avoid Online Scams</h4>
                                         <p className="text-xs text-gray-600">Never share card details or OTPs, and always verify items in person before
@@ -101,22 +88,18 @@ const VideoDetails = () => {
                                     </div>
 
                                     <div className="flex items-center gap-1 bg-[#edf0f8] w-max px-2  py-1 rounded-md">
-
+                                        
                                         <img src="https://res.cloudinary.com/dg2ngi7kh/image/upload/v1734257361/Bideshgami/Public/qpcc1vcwkacldcimlksf.png" alt="" />
                                     </div>
 
 
                                 </div>
 
-                                <div className="grid grid-cols-2 max-w-[450px] mx-auto gap-5 py-4 mt-10">
-                                    <button onClick={handleChatClick} className="flex w-full h-8 rounded-lg text-white bg-primary font-semibold items-center justify-center gap-2  py-6"><HiOutlineChat className="text-lg" /> Chat</button>
+                                <div className="grid grid-cols-2 max-w-[450px] mx-auto gap-5 mt-10">
+                                    <button onClick={handleChatClick} className="flex w-full  rounded-lg text-white bg-primary font-semibold items-center justify-center gap-2 h-12"><HiOutlineChat className="text-lg" /> Chat</button>
 
-                                    <button className="w-full   rounded-lg text-white bg-primary font-semibold  ">
-                                        <Link to={'/apply-form'} className="">
-                                        Apply Now
-                                        </Link>
+                                    <Link to={'/apply-form'}><button className="w-full  h-12 rounded-lg text-white bg-primary font-semibold">Apply Now</button></Link>
 
-                                       </button>
                                 </div>
                                 <div className="mt-10 space-y-2">
                                     <h2 className="text-2xl sm:text-4xl font-bold">Work Permit Visa in Romania</h2>
@@ -248,4 +231,4 @@ const VideoDetails = () => {
     );
 };
 
-export default VideoDetails;
+export default StudentPackageDetails;
