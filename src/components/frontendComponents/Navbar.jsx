@@ -27,7 +27,7 @@ const Navbar = () => {
       </li>
       <li  >
         {" "}
-        <NavLink to={"/student"}>Student</NavLink>{" "}
+        <NavLink to={"/student-package"}>Student</NavLink>{" "}
       </li>
       <li  >
         {" "}

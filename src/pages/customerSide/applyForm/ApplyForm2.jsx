@@ -20,8 +20,9 @@ const ApplyForm2 = () => {
         },
     ]);
 
+    // Tailwind styles for input fields
     const labelStyle =
-        'input input-bordered flex items-center gap-2 relative border-2 rounded-md border-gray-600 h-[36px]';
+        'input input-bordered flex items-center gap-2 relative border-2 rounded-md border-gray-600 h-[36px] w-full';
 
     // Handle changes in a specific form
     const handleChange = (index, e) => {
@@ -38,7 +39,7 @@ const ApplyForm2 = () => {
     const handleSubmit = (e, index) => {
         e.preventDefault();
         console.log(`Form ${index + 1} Data:`, forms[index]);
-        // Optionally reset the specific form
+        // Reset the specific form
         const updatedForms = [...forms];
         updatedForms[index] = {
             name: '',
@@ -76,32 +77,34 @@ const ApplyForm2 = () => {
 
     return (
         <>
-            <p className="text-4xl text-center font-bold my-8">
+            {/* Title */}
+            <p className="text-2xl sm:text-4xl text-center font-bold my-8">
                 Apply <span className="text-primary">Form</span>
             </p>
 
-            <div className="  p-2 w-1/2  mx-auto  mb-10 rounded-md">
+            {/* Form container */}
+            <div className="p-2 w-full sm:w-3/4 lg:w-1/2 mx-auto mb-10 rounded-md">
                 <section className="p-5">
                     {forms.map((formData, index) => (
-                        <div key={index} className="my-10  rounded-lg">
+                        <div key={index} className="my-10 bg-gray-100 p-4 rounded-lg shadow-sm">
                             <FormComponents
-                                
                                 handleSubmit={(e) => handleSubmit(e, index)}
                                 formData={formData}
                                 handleChange={(e) => handleChange(index, e)}
                                 labelStyle={labelStyle}
                             />
                         </div>
-
                     ))}
 
                     {/* Add More button */}
-                    <button
-                        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md"
-                        onClick={addForm}
-                    >
-                        Add More
-                    </button>
+                    <div className="text-center">
+                        <button
+                            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all"
+                            onClick={addForm}
+                        >
+                            Add More
+                        </button>
+                    </div>
                 </section>
             </div>
         </>

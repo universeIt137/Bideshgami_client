@@ -5,6 +5,8 @@ import { FaChevronDown } from 'react-icons/fa';
 import { useState } from 'react';
 import FlightDetails from './FlightDetails';
 import { getTimeDifference } from '../../../../timeDifferent';
+import FlightDetailsTabs from '../components/FlightDetailsTabs';
+import { Link } from 'react-router-dom';
 const FlightCard = ({data}) => {
     const [bookNow, setBookNow] = useState(false)
     const {
@@ -136,7 +138,8 @@ const FlightCard = ({data}) => {
                         {/* Price and button */}
                         <div className="flex justify-between items-center mt-4">
                             <button className="bg-primary text-white py-2 px-4 rounded hover:bg-primary w-max">
-                                Book Now
+                                
+                                <Link to={'/air-ticket/book-now'}>Book Now</Link>
                             </button>
 
                         </div>
@@ -153,12 +156,13 @@ const FlightCard = ({data}) => {
             <div
             className={`bg-white shadow-md overflow-hidden ${bookNow ? 'max-h-[3000px]  p-10' : 'max-h-[0px]  p-0'} transition-all duration-500`}
             >
-                <div className='pb-6 text-sm'>
+                {/* <div className='pb-6 text-sm'>
                     <button className='border-[1.5px] border-gray-600 px-2 py-2 rounded-lg active:scale-90 transition-all duration-300 w-[120px]'>Flight Details</button>
                     <button className='border-[1.5px] border-gray-600 px-2 py-2 rounded-lg active:scale-90 transition-all duration-300 w-[120px]'>Fare Summery</button>
                     <button className='border-[1.5px] border-gray-600 px-2 py-2 rounded-lg active:scale-90 transition-all duration-300 w-[120px]'>Flight Rules</button>
-                </div>
-                <FlightDetails />
+                </div> */}
+                {/* <FlightDetails /> */}
+                <FlightDetailsTabs></FlightDetailsTabs>
             </div>
         </div>
     );
